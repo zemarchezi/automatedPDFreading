@@ -5,3 +5,8 @@ pytesseract
 Wand
 Pillow
 PyMuPDF
+polyglot
+pyicu
+pycld2
+morfessor
+python-docx
