@@ -53,8 +53,16 @@ for run in para.runs:
     bold_list.append(run.bold)
 #%%
 ssa = ''
-for i in texst:
-    
+dictsposition = {}
+for nnb, bol in enumerate(bolds):
+    dictsposition[bol] = {}
+    dictsposition[bol]['img'] = images[nnb] 
+    for nn, te in enumerate(texst):
+        if te.startswith(bol):
+            if dictionaryBrl.check(texst[nn+1].split(' ')[0]):
+                dictsposition[bol]['pt'] = nn
+            if dictionaryEng.check(texst[nn+1].split(' ')[0]):
+                dictsposition[bol]['en'] = nn
 
 # %%
 image1 = z.open('word/media/image1.png').read()
