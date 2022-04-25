@@ -1,0 +1,7 @@
+pandas
+numpy
+pdfminer.six
+pytesseract
+Wand
+Pillow
+PyMuPDF
