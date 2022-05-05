@@ -10,3 +10,4 @@ pyicu
 pycld2
 morfessor
 python-docx
+python-pptx

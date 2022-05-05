@@ -1,6 +1,7 @@
 #%%
 import re
 import fitz
+from matplotlib import image
 from generateLatexFile import *
 from pdf2image import convert_from_path
 #%%
@@ -36,7 +37,7 @@ def extractItemize(text):
 
     return texs
 
-def extractFiguresTextSun_0(docPath, filename):
+def extractFiguresTextSun_0(docPath, filename, outputimage):
 
     
     with fitz.open(docPath + filename) as doc:
@@ -65,23 +66,11 @@ def extractFiguresTextSun_0(docPath, filename):
     textpt = '\section{Sol} \n \subsection{Responsável: José Cecatto}\n\n' +ttextPt
     texten = '\section{Sun} \n \subsection{Responsible: José Cecatto}\n\n' +ttextEn
 
-    # textpt = '\section{Sol} \n \subsection{Responsável: José Cecatto}\n\n\\begin{itemize}\n'
-    # texten = '\section{Sun} \n \subsection{Responsible: José Cecatto}\n\n\\begin{itemize}\n'
-    # for i in ttextPt.split('\n'):
-    #     if len(i) > 2:
-    #         textpt += "\\item "
-    #         textpt += i + '\n'
-    # textpt += '\\end{itemize}\n'
-    # for i in ttextEn.split('\n'):
-    #     if len(i) > 2:
-    #         texten += "\\item "
-    #         texten += i + '\n'
-    # texten += '\\end{itemize}\n'
 
     return texten, textpt
 
 #%%
-def extractFiguresTextSun_1(docPath, filename):
+def extractFiguresTextSun_1(docPath, filename, outputimage):
     regexPt = r"(?i)resumo"
     regexEn = r"(?i)summary"
     
@@ -96,36 +85,57 @@ def extractFiguresTextSun_1(docPath, filename):
             elif matchesen:
                 pageEn = page
 
-
-            # for i in textsplit:
-                
-                
-
-                
-
-            
-
         ttextEn = doc[pageEn].get_text()
         ttextPt = doc[pagePt].get_text()
     
         imagesPages = {'en':list(range(pagePt+1,pageEn)), 'pt':list(range(pageEn+1,len(doc)))}
 
-    print(imagesPages)
+    pages = convert_from_path(docPath + filename, 500)
+    pathEn = []
+    pathPt = []
+    for im in imagesPages.keys():
+        langPage = imagesPages[im]
+        for p in range(len(langPage)):
+            outimagePath = f"{outputimage}{im}_outfile_{p}.jpg"
+            if im == 'en':
+                pathEn.append(outimagePath)
+            else:
+                pathPt.append(outimagePath)
+            pages[langPage[p]].save(outimagePath, 'JPEG')
+            # pageim = doc.loadPage(langPage[p])  # number of page
+            # pix = pageim.get_pixmap()
+            # output = f"{im}_outfile_{p}.png"
+            # pix.save(output)
+
+    textpt = '\section{Sol} \n \subsection{Responsável: Douglas Silva}\n\n' +extractItemize(ttextPt) + '\n'
+    texten = '\section{Sun} \n \subsection{Responsible: Douglas Silva}\n\n' +extractItemize(ttextEn) +'\n'
+
+    print(pathEn)
     
-    textpt = '\section{Sol} \n \subsection{Responsável: Douglas Silva}\n\n' +extractItemize(ttextPt)
-    texten = '\section{Sun} \n \subsection{Responsible: Douglas Silva}\n\n' +extractItemize(ttextEn)
- 
+    figures = """
+    \\begin{figure}[H]
+        \\centering
+        \\includegraphics[width=14cm]{./%s}
+    \\end{figure} \n \n
+    """
+    for s in range(len(pathEn)):
+        ouIm = '/'.join(pathEn[s].split('/')[2:])
+        texten += figures % (ouIm)
+
+    for s in range(len(pathPt)):
+        ouIm = '/'.join(pathPt[s].split('/')[2:])
+        textpt += figures % (ouIm)
 
     return texten, textpt
 
 #%%
 
-PATH = '/home/jose/python_projects/automatedPDFreading/data/'
+PATH = '/home/jose/python_projects/automatedPdfReading/data/'
 
 filename = 'briefing_25_april_02_may_Douglas.pdf'
 
 #%%
-texten, textpt = extractFiguresTextSun_1(PATH, filename)
+texten, textpt = extractFiguresTextSun_1(PATH, filename, outputimage='./latexText/figures/')
 generateLaTexFile(texten, EnPt=True, outputPath='./latexText', date='2022/04/25')
 
 #%%
