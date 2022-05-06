@@ -130,7 +130,7 @@ def extractFiguresTextSun_1(docPath, filename, outputimage):
 
 #%%
 
-PATH = '/home/jose/python_projects/automatedPdfReading/data/'
+PATH = './data/'
 
 filename = 'briefing_25_april_02_may_Douglas.pdf'
 

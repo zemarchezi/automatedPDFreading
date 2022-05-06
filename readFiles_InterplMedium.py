@@ -27,7 +27,7 @@ def get_bold_list(para):
     return bold_list
 def extractFiguresTextInterplMedium(docPath, filename):
 
-    z = zipfile.ZipFile(PATH+filename)
+    z = zipfile.ZipFile(docPath+filename)
     all_files = z.namelist()
     images = [x for x in all_files if x.startswith('ppt/media/image6')]
 
@@ -79,7 +79,7 @@ def constructLatexFileInterpMedium(docPath, filename, outputFigure):
 #%%
 
 
-PATH = '/home/jose/python_projects/automatedPdfReading/data/'
+PATH = './data/'
 
 filename = 'briefing_06_12_2021.pptx'
 
