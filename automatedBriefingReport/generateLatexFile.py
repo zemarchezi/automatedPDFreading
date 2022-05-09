@@ -2,8 +2,10 @@ def generateLaTexFile(texto, EnPt, outputPath, date):
     
     if EnPt:
         title = 'Briefing Space Weather'
+        outFile = 'reportSpaceWeather_En'
     else:
         title = 'Briefing Clima Espacial'
+        outFile = 'reportSpaceWeather_Pt'
 
     textTemplate = '''\\documentclass[11pt, oneside]{article}
 \\usepackage[bottom=2.5cm,top=2.5cm]{geometry}
@@ -26,5 +28,7 @@ def generateLaTexFile(texto, EnPt, outputPath, date):
 
     outtext = f"{textTemplate}{texto}\n\n" + "\end{document}"
 
-    with open(f'{outputPath}/reportSpaceWeather.tex', 'w')  as fls:
+    with open(f'{outputPath}/{outFile}.tex', 'w')  as fls:
         fls.write(outtext)
+
+    return f'{outputPath}/{outFile}.tex'

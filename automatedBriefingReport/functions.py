@@ -134,10 +134,10 @@ def separatePathsAreas(files):
     regexROTI = r"(?i)ionosphere.*roti"
     regexRadBeltEn = r"(?i)radiation.*belt"
     regexRadBeltPt = r"(?i)cintur.*radia"
-    regexIonosf = r"(?i)sum.*ionosfera"
+    regexIonosf = r"(?i)sum.rio.*ionosfera"
     regexMeioInterpl = r"(?i)meio.*interpl"
     regexGeomag = r"(?i)(geomag)|(Embrace)"
-    dictPaths = {}
+    dictPaths = {'04RadBelt':{}}
     for ff in files:
         if ff.endswith("pdf"):
             with fitz.open(ff) as doc:
@@ -145,30 +145,30 @@ def separatePathsAreas(files):
                 for page in range(len(doc)):
                     text += doc[page].get_text()
             if re.search(regexULF, text, re.MULTILINE):
-                dictPaths['ULF'] = {'path':ff}
+                dictPaths['05ULF'] = {'path':ff}
             if re.search(regexScint, text, re.MULTILINE):
-                dictPaths['Scintilation'] = {'path':ff}
+                dictPaths['09Scintilation'] = {'path':ff}
             if re.search(regexSun0, text, re.MULTILINE):
                 dictPaths['01Sun'] = {'path':ff}
             if re.search(regexSun1, text, re.MULTILINE):
                 dictPaths['02Sun'] = {'path':ff}
             if re.search(regexImager, text, re.MULTILINE):
-                dictPaths['Imager'] = {'path':ff}
+                dictPaths['10Imager'] = {'path':ff}
             if re.search(regexEmic, text, re.MULTILINE):
-                dictPaths['EMIC'] = {'path':ff}
+                dictPaths['06EMIC'] = {'path':ff}
         if ff.endswith("docx"):
             document = Document(ff)
             text= ''
             for para in document.paragraphs:
                 text += para.text
             if re.search(regexROTI, text, re.MULTILINE):
-                dictPaths['ROTI'] = {'path':ff}
+                dictPaths['11ROTI'] = {'path':ff}
             if re.search(regexRadBeltEn, text, re.MULTILINE):
-                dictPaths['RadBelt'] = {'pathEn':ff}
+                dictPaths['04RadBelt']['pathEn'] = ff
             if re.search(regexRadBeltPt, text, re.MULTILINE):
-                dictPaths['RadBelt'] = {'pathPt':ff}
+                dictPaths['04RadBelt']['pathPt'] = ff
             if re.search(regexIonosf, text, re.MULTILINE):
-                dictPaths['Ionosfera'] = ff
+                dictPaths['08Ionosfera'] = {'path':ff}
         if ff.endswith("pptx"):
             prs = Presentation(ff)
             text= ''
@@ -178,7 +178,7 @@ def separatePathsAreas(files):
                         text += shapes.text
             
             if re.search(regexMeioInterpl, text, re.MULTILINE):
-                dictPaths['03MeioInterp'] = ff
+                dictPaths['03MeioInterp'] = {'path':ff}
         if ff.endswith('xlsx'):
             wb = load_workbook(ff)
             sheetpt = wb['Plan4pt']
@@ -187,6 +187,6 @@ def separatePathsAreas(files):
                 cell_obj = sheetpt.cell(row = r+1, column = 1)
                 text += cell_obj.value
             if re.search(regexGeomag, text, re.MULTILINE):
-                dictPaths['Geomag'] = ff
+                dictPaths['07Geomag'] = {'path':ff}
     
     return dictPaths

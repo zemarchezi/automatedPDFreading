@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 import pytesseract
+from automatedBriefingReport.functions import *
 from pdfminer.high_level import extract_text
 import fitz
 import io
@@ -10,21 +11,21 @@ from PIL import Image
 from docx import Document
 import zipfile
 from polyglot.detect import Detector
-from generateLatexFile import *
+# from generateLatexFile import *
 
 
 # %%
-def saveFigs(zipf, zipimgpath, outputpath, figname):
-    image1 = zipf.open(zipimgpath).read()
-    f = open(f'{outputpath}/{figname}.png','wb')
-    f.write(image1)
-    return f'{outputpath}/{figname}.png'
+# def saveFigs(zipf, zipimgpath, outputpath, figname):
+#     image1 = zipf.open(zipimgpath).read()
+#     f = open(f'{outputpath}/{figname}.png','wb')
+#     f.write(image1)
+#     return f'{outputpath}/{figname}.png'
 
-def get_bold_list(para):
-    bold_list = []
-    for run in para.runs:
-        bold_list.append(run.bold)
-    return bold_list
+# def get_bold_list(para):
+#     bold_list = []
+#     for run in para.runs:
+#         bold_list.append(run.bold)
+#     return bold_list
 def extractFiguresTextIonosphere(docPath, filename):
 
     z = zipfile.ZipFile(docPath+filename)
@@ -68,7 +69,7 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure):
     texten = '\section{Ionosphere} \n \subsection{Responsible: Laysa Resende} \n \n'
     for i in range(len(keys)):
         figname = keys[i].replace(' ', '').replace(':','')
-        outfigpath = saveFigs(zipf, dictsposition[keys[i]]['img'], f"{outputFigure}", figname)
+        outfigpath = saveFigs(zipf, dictsposition[keys[i]]['img'], f"{outputFigure}", figname, crop=False)
         textpt += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
         texten += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
         if i+1 < len(keys):
@@ -100,11 +101,11 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure):
 #%%
 
 
-PATH = '/home/jose/python_projects/automatedPDFreading/data/'
+PATH = './data/'
 
 filename = 'Sumário(06:12-13:12)_Laysa.docx'
 
 textpt, texten = constructLatexFileIonosphere(PATH, filename, outputFigure='./latexText/figures')
 
-generateLaTexFile(textpt, EnPt=False, outputPath='./latexText', date='25/04/2022')
+# generateLaTexFile(textpt, EnPt=False, outputPath='./latexText', date='25/04/2022')
 # %%

@@ -1,7 +1,7 @@
 #%%
 import re
 import fitz
-from functions import *
+from automatedBriefingReport.functions import *
 from pdf2image import convert_from_path
 from pptx import Presentation
 import zipfile
@@ -17,7 +17,7 @@ import string
 ##  SUN
 ########################################################################################
 
-def extractFiguresTextSun_0(docPath, filename, outputimage, responsible):
+def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
 
     
     with fitz.open(docPath + filename) as doc:
@@ -50,7 +50,7 @@ def extractFiguresTextSun_0(docPath, filename, outputimage, responsible):
     return texten, textpt
 
 #%%
-def extractFiguresTextSun_1(docPath, filename, outputimage, responsible):
+def extractFiguresTextSun_1(docPath, filename, outputFigure, responsible):
     regexPt = r"(?i)resumo"
     regexEn = r"(?i)summary"
     
@@ -76,7 +76,7 @@ def extractFiguresTextSun_1(docPath, filename, outputimage, responsible):
     for im in imagesPages.keys():
         langPage = imagesPages[im]
         for p in range(len(langPage)):
-            outimagePath = f"{outputimage}{im}_outfile_{p}.jpg"
+            outimagePath = f"{outputFigure}{im}_outfileSun_{p}.jpg"
             if im == 'en':
                 pathEn.append(outimagePath)
             else:
@@ -147,7 +147,7 @@ def constructLatexFileInterpMedium(docPath, filename, outputFigure, responsible)
     textpt = '\section{Meio Interplanetário} \n \subsection{Responsável: %s} \n \n ' %(responsible) 
     texten = '\section{Interplanetary Medium} \n \subsection{Responsible: %s} \n \n ' %(responsible) 
     
-    outfigpath = saveFigs(zipf, images[0], f"{outputFigure}", 'figureMIIndex')
+    outfigpath = saveFigs(zipf, images[0], f"{outputFigure}", 'figureMIIndex', crop=False)
 
     includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n \\begin{itemize}\n " % '/'.join(outfigpath.split('/')[2:]) 
 
@@ -163,7 +163,7 @@ def constructLatexFileInterpMedium(docPath, filename, outputFigure, responsible)
             texten += '\\item ' + texsten[i] + '\n'
     texten += "\\end{itemize} \n"
 
-    return textpt, texten
+    return texten, textpt
 #%%
 
 ########################################################################################
@@ -239,7 +239,7 @@ def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible):
 ########################################################################################
 
 
-def extractFiguresTextULF(docPath, filename, outputimage, responsible):
+def extractFiguresTextULF(docPath, filename, outputFigure, responsible):
     ttextEn = ''
     ttextPt = ''
     with fitz.open(docPath + filename) as doc:
@@ -313,7 +313,7 @@ def extractFiguresTextULF(docPath, filename, outputimage, responsible):
     for i in range(len(keys)):
         crops = imagesDict[keys[i]]['crop']
         outfigpath = saveFigsPdf(pages, imagesDict[keys[i]]['page'], 
-                             f"{outputimage}", f'figureULF_{i}', 
+                             f"{outputFigure}", f'figureULF_{i}', 
                              crops)
         
         textpt += includeFigure % ('/'.join(outfigpath.split('/')[2:]), imagesDict[keys[i]]['leg_pt'])
@@ -322,7 +322,7 @@ def extractFiguresTextULF(docPath, filename, outputimage, responsible):
     textpt += ttextPt
     texten += ttextEn
 
-    return textpt, texten
+    return texten, textpt
 
 
 ########################################################################################
@@ -330,7 +330,7 @@ def extractFiguresTextULF(docPath, filename, outputimage, responsible):
 ########################################################################################
 
 
-def extractFiguresTextULF(docPath, filename, outputimage, responsible):
+def extractFiguresTextEMIC(docPath, filename, outputFigure, responsible):
     textPt = ''
     textEn = ''
     
@@ -346,7 +346,7 @@ def extractFiguresTextULF(docPath, filename, outputimage, responsible):
     texten = '\section{EMIC Waves} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
     for i in range(1,len(pages)):
         outfigpath = saveFigsPdf(pages, i, 
-                             f"{outputimage}", f'figureEMIC_{i}', crop=False)
+                             f"{outputFigure}", f'figureEMIC_{i}', crop=False)
         
         textpt += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
         texten += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
@@ -354,7 +354,7 @@ def extractFiguresTextULF(docPath, filename, outputimage, responsible):
     textPt += textpt
     textEn += textpt
 
-    return textPt, textEn
+    return textEn, textPt
 
 
 ####################################################
@@ -438,7 +438,7 @@ def constructLatexFileGeomag(docPath, filename, outputFigure, responsible):
     # text += textSum
 
 
-    return textpt, texten
+    return texten, textpt
 
 
 ####################################################
@@ -490,7 +490,7 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible):
     texten = '\section{Ionosphere} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
     for i in range(len(keys)):
         figname = keys[i].replace(' ', '').replace(':','')
-        outfigpath = saveFigs(zipf, dictsposition[keys[i]]['img'], f"{outputFigure}", figname)
+        outfigpath = saveFigs(zipf, dictsposition[keys[i]]['img'], f"{outputFigure}", figname, crop=False)
         textpt += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
         texten += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
         if i+1 < len(keys):
@@ -515,7 +515,7 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible):
         texten += f'{textitemen}' + '\\end{itemize}\n'
         texten += f"{includeFigure}\n"
 
-    return textpt, texten
+    return texten, textpt
 
 
 ########################################################################################
@@ -523,7 +523,7 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible):
 ########################################################################################
 
 
-def extractFiguresTextScint(docPath, filename, outputimage, responsible):
+def extractFiguresTextScint(docPath, filename, outputFigure, responsible):
     regexPt = r"(?i)resumo"
     regexEn = r"(?i)summary"
     
@@ -549,7 +549,7 @@ def extractFiguresTextScint(docPath, filename, outputimage, responsible):
     for im in imagesPages.keys():
         langPage = imagesPages[im]
         for p in range(len(langPage)):
-            outimagePath = f"{outputimage}{im}_outfile_{p}.jpg"
+            outimagePath = f"{outputFigure}{im}_outfileScint_{p}.jpg"
             if im == 'en':
                 pathEn.append(outimagePath)
             else:
@@ -589,7 +589,7 @@ def extractFiguresTextScint(docPath, filename, outputimage, responsible):
 
 
 
-def extractFiguresTextImager(docPath, filename, outputimage, responsible):
+def extractFiguresTextImager(docPath, filename, outputFigure, responsible):
 
     pages = convert_from_path(docPath + filename, 500)
 
@@ -619,7 +619,7 @@ def extractFiguresTextImager(docPath, filename, outputimage, responsible):
         if 'crop' in list(textDict[keys[i]].keys()):
             crops = textDict[keys[i]]['crop']
             outfigpath = saveFigsPdf(pages, textDict[keys[i]]['page'], 
-                                f"{outputimage}", f'figureImager_{i}', 
+                                f"{outputFigure}", f'figureImager_{i}', 
                                 crops)
             ttextEn += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
             ttextPt += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
@@ -751,4 +751,4 @@ def constructLatexFileRoti(docPath, filename, outputFigure, responsible):
     # text += textSum
 
 
-    return textpt, texten
+    return texten, textpt
