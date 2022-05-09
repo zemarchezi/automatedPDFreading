@@ -4,7 +4,8 @@ import numpy as np
 from io import BytesIO
 import fitz
 from matplotlib import image
-from generateLatexFile import *
+from automatedBriefingReport.generateLatexFile import *
+from automatedBriefingReport.functions import *
 from pdf2image import convert_from_path
 from polyglot.detect import Detector
 import cv2
@@ -12,30 +13,30 @@ import matplotlib.pyplot as plt
 import re
 #%%
 
-def extractItemize_Scint(text):
-    texs = """\\begin{itemize} \n """
-    for i in text.split('•'):
-        if len(i) > 1:
-            texs += '\\item ' + ' '.join(i.split('\n')) +'\n'
-            if i.startswith('TEC'):
-                texs += '\\subsectoin{%s}' %(i) +'\n'
+# def extractItemize_Imager(text):
+#     texs = """\\begin{itemize} \n """
+#     for i in text.split('•'):
+#         if len(i) > 1:
+#             texs += '\\item ' + ' '.join(i.split('\n')) +'\n'
+#             if i.startswith('TEC'):
+#                 texs += '\\subsectoin{%s}' %(i) +'\n'
     
-    texs += """\\end{itemize} \n """
+#     texs += """\\end{itemize} \n """
 
-    return texs
+#     return texs
 
 
-def saveFigs(pages, page, outputpath, figname, crop):
-    with BytesIO() as image_byte_array:
-        pages[page].save(image_byte_array, format='PNG')
-        image_to_extract = image_byte_array.getvalue()
-        img = cv2.imdecode(np.frombuffer(image_to_extract, np.uint8),3)
-        imgCropped = img[crop[0]:crop[1],crop[2]:crop[3]]
-    cv2.imwrite(f'{outputpath}/{figname}.png',imgCropped)
-    return f'{outputpath}/{figname}.png'
+# def saveFigs(pages, page, outputpath, figname, crop):
+#     with BytesIO() as image_byte_array:
+#         pages[page].save(image_byte_array, format='PNG')
+#         image_to_extract = image_byte_array.getvalue()
+#         img = cv2.imdecode(np.frombuffer(image_to_extract, np.uint8),3)
+#         imgCropped = img[crop[0]:crop[1],crop[2]:crop[3]]
+#     cv2.imwrite(f'{outputpath}/{figname}.png',imgCropped)
+#     return f'{outputpath}/{figname}.png'
 
 #%%
-def extractFiguresTextRoti(docPath, filename, outputimage):
+def extractFiguresTextImager(docPath, filename, outputimage, responsible):
 
     pages = convert_from_path(docPath + filename, 500)
 
@@ -55,18 +56,20 @@ def extractFiguresTextRoti(docPath, filename, outputimage):
                         \\end{figure}\n
                      """
     keys = list(textDict.keys())
-    ttextEn = ''
-    ttextPt = ''
-    # ttextPt = '\section{Imageador All-Sky} \n \subsection{Responsável: LUME} \n \n'
-    # ttextEn = '\section{All-Sky Imager} \n \subsection{Responsible: LUME} \n \n' 
+    # ttextEn = ''
+    # ttextPt = ''
+    ttextPt = '\section{Imageador All-Sky} \n \subsection{Responsável: LUME} \n \n'
+    ttextEn = '\section{All-Sky Imager} \n \subsection{Responsible: LUME} \n \n' 
 
     
     for i in range(len(keys)):
-        if 'regex_en' not in list(textDict[keys[i]].keys()):
+        if 'crop' in list(textDict[keys[i]].keys()):
             crops = textDict[keys[i]]['crop']
-            outfigpath = saveFigs(pages, textDict[keys[i]]['page'], 
-                                f"{outputimage}", f'figureScint_{i}', 
+            outfigpath = saveFigsPdf(pages, textDict[keys[i]]['page'], 
+                                f"{outputimage}", f'figureImager_{i}', 
                                 crops)
+            ttextEn += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
+            ttextPt += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
             # includeFigure % ('/'.join(outfigpath.split('/')[2:]))
         else:
             if keys[i] == 'tec':
@@ -78,10 +81,10 @@ def extractFiguresTextRoti(docPath, filename, outputimage):
             matches = re.search(textDict[keys[i]]['regex_en'], text, re.MULTILINE)
             
             if matches:
-                ttextEn += extractItemize_Scint(matches.group())
+                ttextEn += extractItemize_Imager(matches.group())
             matches = re.search(textDict[keys[i]]['regex_pt'], text, re.MULTILINE)
             if matches:
-                ttextPt += extractItemize_Scint(matches.group())
+                ttextPt += extractItemize_Imager(matches.group())
 
     return ttextEn, ttextPt
 
@@ -92,7 +95,7 @@ PATH = './data/'
 filename = 'EMBRACE_BRIEFING_REPORT_24.04-30.04_Prosper.pdf'
 
 #%%
-texten, textpt = extractFiguresTextScint(PATH, filename, outputimage='./latexText/figures/')
+texten, textpt = extractFiguresTextImager(PATH, filename, outputimage='./latexText/figures/', responsible="LUME")
 generateLaTexFile(textpt, EnPt=True, outputPath='./latexText', date='2022/04/25')
 
 #%%

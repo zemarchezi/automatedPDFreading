@@ -2,13 +2,7 @@
 from PIL import Image
 from io import StringIO
 import matplotlib.pyplot as plt
-from docx import Document
-import zipfile
-from polyglot.detect import Detector
 from generateLatexFile import *
-import cv2
-import numpy as np
-import pandas as pd
 import string
 from openpyxl import load_workbook
 from openpyxl_image_loader import SheetImageLoader

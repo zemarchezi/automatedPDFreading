@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.5)  7 MAY 2022 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.5)  8 MAY 2022 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,83 +372,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-<./figures/figureGeomag_0.png, id=12, 1204.5pt x 803.0pt>
-File: ./figures/figureGeomag_0.png Graphic file (type png)
-<use ./figures/figureGeomag_0.png>
-Package pdftex.def Info: ./figures/figureGeomag_0.png  used on input line 27.
-(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
-<./figures/figureGeomag_1.png, id=13, 1204.5pt x 803.0pt>
-File: ./figures/figureGeomag_1.png Graphic file (type png)
-<use ./figures/figureGeomag_1.png>
-Package pdftex.def Info: ./figures/figureGeomag_1.png  used on input line 35.
-(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
+<./figures//figureImager_0.png, id=12, 3563.3125pt x 2509.375pt>
+File: ./figures//figureImager_0.png Graphic file (type png)
+<use ./figures//figureImager_0.png>
+Package pdftex.def Info: ./figures//figureImager_0.png  used on input line 27.
+(pdftex.def)             Requested size: 398.33858pt x 280.51202pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/figureGeomag_0.p
-ng (PNG copy)>]
-<./figures/figureGeomag_2.png, id=23, 702.625pt x 451.6875pt>
-File: ./figures/figureGeomag_2.png Graphic file (type png)
-<use ./figures/figureGeomag_2.png>
-Package pdftex.def Info: ./figures/figureGeomag_2.png  used on input line 43.
-(pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
-<./figures/figureGeomag_3.png, id=25, 702.625pt x 451.6875pt>
-File: ./figures/figureGeomag_3.png Graphic file (type png)
-<use ./figures/figureGeomag_3.png>
-Package pdftex.def Info: ./figures/figureGeomag_3.png  used on input line 51.
-(pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
- [2 <./figures/figureGeomag_1.png (PNG copy)> <./figures/figureGeomag_2.png>]
-<./figures/figureGeomag_4.png, id=31, 1204.5pt x 677.53125pt>
-File: ./figures/figureGeomag_4.png Graphic file (type png)
-<use ./figures/figureGeomag_4.png>
-Package pdftex.def Info: ./figures/figureGeomag_4.png  used on input line 59.
-(pdftex.def)             Requested size: 398.33858pt x 224.06155pt.
-<./figures/figureGeomag_5.png, id=32, 742.775pt x 225.84375pt>
-File: ./figures/figureGeomag_5.png Graphic file (type png)
-<use ./figures/figureGeomag_5.png>
-Package pdftex.def Info: ./figures/figureGeomag_5.png  used on input line 67.
-(pdftex.def)             Requested size: 398.33858pt x 121.11984pt.
-<./figures/figureGeomag_6.png, id=33, 1505.625pt x 1053.9375pt>
-File: ./figures/figureGeomag_6.png Graphic file (type png)
-<use ./figures/figureGeomag_6.png>
-Package pdftex.def Info: ./figures/figureGeomag_6.png  used on input line 75.
-(pdftex.def)             Requested size: 398.33858pt x 278.84181pt.
- [3 <./figures/figureGeomag_3.png> <./figures/figureGeomag_4.png> <./figures/fi
-gureGeomag_5.png>]
-<./figures/figureGeomag_7.png, id=41, 1505.625pt x 1053.9375pt>
-File: ./figures/figureGeomag_7.png Graphic file (type png)
-<use ./figures/figureGeomag_7.png>
-Package pdftex.def Info: ./figures/figureGeomag_7.png  used on input line 83.
-(pdftex.def)             Requested size: 398.33858pt x 278.84181pt.
- [4 <./figures/figureGeomag_6.png> <./figures/figureGeomag_7.png>] [5] (./repor
-tSpaceWeather.aux)
-
-Package rerunfilecheck Warning: File `reportSpaceWeather.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `reportSpaceWeather.out':
-(rerunfilecheck)             Before: CE505DE6765DD655CE234A78F2CD22E4;337
-(rerunfilecheck)             After:  B683B5256E90CC842BCDD702B525E5C1;329.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures//figureImager_0.
+png (PNG copy)>] (./reportSpaceWeather.aux)
+Package rerunfilecheck Info: File `reportSpaceWeather.out' has not changed.
+(rerunfilecheck)             Checksum: B11FBD07BCD983815816CD1FF0694F22;279.
  ) 
 Here is how much of TeX's memory you used:
- 10336 strings out of 480186
- 164180 string characters out of 5894356
- 460038 words of memory out of 5000000
- 28147 multiletter control sequences out of 15000+600000
- 476064 words of font info for 53 fonts, out of 8000000 for 9000
+ 10282 strings out of 480186
+ 162628 string characters out of 5894356
+ 464037 words of memory out of 5000000
+ 28105 multiletter control sequences out of 15000+600000
+ 475756 words of font info for 52 fonts, out of 8000000 for 9000
  38 hyphenation exceptions out of 8191
- 60i,6n,63p,287b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,63p,320b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
-1095.pfb>
-Output written on reportSpaceWeather.pdf (5 pages, 1185556 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfrm1095.pfb>
+Output written on reportSpaceWeather.pdf (1 page, 842166 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 49 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 22 words of extra memory for PDF output out of 10000 (max. 10000000)
 

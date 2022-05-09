@@ -94,7 +94,7 @@ def extractFiguresTextULF(docPath, filename, outputimage):
 
     for i in range(len(keys)):
         crops = imagesDict[keys[i]]['crop']
-        outfigpath = saveFigs(pages, imagesDict[keys[i]]['page'], 
+        outfigpath = saveFigsPdf(pages, imagesDict[keys[i]]['page'], 
                              f"{outputimage}", f'figureULF_{i}', 
                              crops)
         

@@ -13,18 +13,6 @@ from polyglot.detect import Detector
 from generateLatexFile import *
 
 
-# %%
-def saveFigs(zipf, zipimgpath, outputpath, figname):
-    image1 = zipf.open(zipimgpath).read()
-    f = open(f'{outputpath}/{figname}.png','wb')
-    f.write(image1)
-    return f'{outputpath}/{figname}.png'
-
-def get_bold_list(para):
-    bold_list = []
-    for run in para.runs:
-        bold_list.append(run.bold)
-    return bold_list
 def extractFiguresTextInterplMedium(docPath, filename):
 
     z = zipfile.ZipFile(docPath+filename)
@@ -56,7 +44,7 @@ def constructLatexFileInterpMedium(docPath, filename, outputFigure):
     textpt = '\section{Meio Interplanetário} \n \subsection{Responsável: Paulo Jauer} \n \n '
     texten = '\section{Interplanetary Medium} \n \subsection{Responsible: Paulo Jauer} \n \n '
     
-    outfigpath = saveFigs(zipf, images[0], f"{outputFigure}", 'figureMIIndex')
+    outfigpath = saveFigs(zipf, images[0], f"{outputFigure}", 'figureMIIndex', crop=False)
 
     includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n \\begin{itemize}\n " % '/'.join(outfigpath.split('/')[2:]) 
 
