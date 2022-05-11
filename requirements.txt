@@ -1,0 +1,15 @@
+pandas
+numpy
+pdfminer.six
+pytesseract
+Wand
+Pillow
+PyMuPDF
+polyglot
+pyicu
+pycld2
+morfessor
+python-docx
+python-pptx
+openpyxl_image_loader
+openpyxl
