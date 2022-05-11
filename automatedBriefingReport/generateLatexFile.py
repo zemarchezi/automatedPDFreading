@@ -7,8 +7,8 @@ def generateLaTexFile(texto, EnPt, outputPath, date):
         title = 'Briefing Clima Espacial'
         outFile = 'reportSpaceWeather_Pt'
 
-    textTemplate = '''\\documentclass[11pt, oneside]{article}
-\\usepackage[bottom=2.5cm,top=2.5cm]{geometry}
+    textTemplate = '''\\documentclass[a4paper, 10pt]{article}
+\\usepackage[a4paper,margin=1in,bottom=2.5cm,top=2.5cm, headheight=26pt]{geometry}
 \\geometry{a4paper}
 \\usepackage{graphicx}
 \\usepackage{amssymb}
@@ -17,16 +17,20 @@ def generateLaTexFile(texto, EnPt, outputPath, date):
 \\usepackage{color}
 \\usepackage{float}
 \\usepackage{hyperref}
-\\bibliographystyle{apalike}
+\\usepackage{fancyhdr}
 \\usepackage{indentfirst}
 
-\\title{%s}
+\\pagestyle{fancy}
+
+\\lhead{\\includegraphics[width=10cm]{embracetopimage.png}}
+
+\\title{\\Large{\\textbf{%s}}}
 \\date{%s}
 
 \\begin{document}
-\\maketitle \n\n ''' %(title, date)
+\\maketitle \n\n  \\thispagestyle{fancy} ''' %(title, date)
 
-    outtext = f"{textTemplate}{texto}\n\n" + "\end{document}"
+    outtext = f"{textTemplate}{texto}\n\n" + "\\end{document}"
 
     with open(f'{outputPath}/{outFile}.tex', 'w')  as fls:
         fls.write(outtext)

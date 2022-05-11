@@ -44,8 +44,8 @@ def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
     ttextEn = ttextEn.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
     ttextPt = ttextPt.strip().replace('%', '\%').replace('\n', "\\\ ")
     ttextPt = ttextPt.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
-    textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n' %(responsible) +ttextPt
-    texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n' %(responsible) +ttextEn
+    textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n' %(responsible) +ttextEn
+    texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n' %(responsible) +ttextPt
 
 
     return texten, textpt

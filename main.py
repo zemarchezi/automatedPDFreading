@@ -46,7 +46,7 @@ for area in dictPaths.keys():
             texten, textpt = extractFiguresTextSun_0(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='José Cecatto')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -58,7 +58,7 @@ for area in dictPaths.keys():
         texten, textpt = extractFiguresTextSun_1(docPath=dirpath, 
                                                  filename=filename, 
                                                  outputFigure=outputimage, 
-                                                 responsible='Douglas Silva')
+                                                 responsible='Nome')
     
     if area == '03MeioInterp':
         print(area)
@@ -67,7 +67,7 @@ for area in dictPaths.keys():
             texten, textpt = constructLatexFileInterpMedium(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Paulo Ricardo Jauer')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -83,11 +83,11 @@ for area in dictPaths.keys():
             textpt = constructLatexFileRadBelts(docPath=dirpathpt, 
                                                     filename=filenamept, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Ligia Alves da Silva')
+                                                    responsible='Nome')
             texten = constructLatexFileRadBelts(docPath=dirpathpt, 
                                                     filename=filenameen, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Ligia Alves da Silva')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -100,7 +100,7 @@ for area in dictPaths.keys():
             texten, textpt = extractFiguresTextULF(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='José Paulo Marchezi')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -113,7 +113,7 @@ for area in dictPaths.keys():
             texten, textpt = extractFiguresTextEMIC(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='José Paulo Marchezi')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -126,7 +126,7 @@ for area in dictPaths.keys():
             texten, textpt = constructLatexFileGeomag(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='José Paulo Marchezi')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -139,7 +139,7 @@ for area in dictPaths.keys():
             texten, textpt = constructLatexFileIonosphere(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Laysa Resende')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -152,7 +152,7 @@ for area in dictPaths.keys():
             texten, textpt = extractFiguresTextScint(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Siomel Savio Odriozola')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -165,7 +165,7 @@ for area in dictPaths.keys():
             texten, textpt = extractFiguresTextImager(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='LUME')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
@@ -178,7 +178,7 @@ for area in dictPaths.keys():
             texten, textpt = constructLatexFileRoti(docPath=dirpath, 
                                                     filename=filename, 
                                                     outputFigure=outputimage, 
-                                                    responsible='Carolina de Sousa do Carmo')
+                                                    responsible='Nome')
         except (Exception) as e:
             print(e)
             textpt = ''
