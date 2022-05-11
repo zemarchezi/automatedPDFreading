@@ -23,13 +23,13 @@ outputimage='./latexText/figures/'
 
 # keys = list(dictPaths.keys())
 # #%%
-# area = keys[1]
+# area = keys[0]
 # filename = dictPaths[area]['path'].split('/')[-1]
 # dirpath = '/'.join(dictPaths[area]['path'].split('/')[0:-1])+'/'
+# # #%%
+# # # #%%
 
-# #%%
-
-# texten, textpt = extractFiguresTextSun_1(docPath=dirpath, 
+# texten, textpt = extractFiguresTextSun_0(docPath=dirpath, 
 #                                                  filename=filename, 
 #                                                  outputFigure=outputimage, 
 #                                                  responsible='Douglas Silva')
@@ -49,8 +49,9 @@ for area in dictPaths.keys():
                                                     responsible='José Cecatto')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
-            # print(filename)
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '02Sun':
         print(area)
         print(filename)
@@ -69,7 +70,9 @@ for area in dictPaths.keys():
                                                     responsible='Paulo Ricardo Jauer')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '04RadBelt':
         print(area)
         try:
@@ -87,6 +90,8 @@ for area in dictPaths.keys():
                                                     responsible='Ligia Alves da Silva')
         except (Exception) as e:
             print(e)
+            textpt = ''
+            texten = ''
             print(f"{area} {filenamept} --- Error")
     if area == '05ULF':
         print(area)
@@ -98,7 +103,9 @@ for area in dictPaths.keys():
                                                     responsible='José Paulo Marchezi')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '06EMIC':
         print(area)
         print(filename)
@@ -109,7 +116,9 @@ for area in dictPaths.keys():
                                                     responsible='José Paulo Marchezi')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '07Geomag':
         print(area)
         print(filename)
@@ -120,7 +129,9 @@ for area in dictPaths.keys():
                                                     responsible='José Paulo Marchezi')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '08Ionosfera':
         print(area)
         print(filename)
@@ -131,7 +142,9 @@ for area in dictPaths.keys():
                                                     responsible='Laysa Resende')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '09Scintilation':
         print(area)
         print(filename)
@@ -142,7 +155,9 @@ for area in dictPaths.keys():
                                                     responsible='Siomel Savio Odriozola')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '10Imager':
         print(area)
         print(filename)
@@ -153,7 +168,9 @@ for area in dictPaths.keys():
                                                     responsible='LUME')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     if area == '11ROTI':
         print(area)
         print(filename)
@@ -164,7 +181,9 @@ for area in dictPaths.keys():
                                                     responsible='Carolina de Sousa do Carmo')
         except (Exception) as e:
             print(e)
-            print(f"{area} {filename} --- Error")
+            textpt = ''
+            texten = ''
+            print(f"{area} {filenamept} --- Error")
     latexTextEn += texten
     latexTextPt += textpt
 #%%

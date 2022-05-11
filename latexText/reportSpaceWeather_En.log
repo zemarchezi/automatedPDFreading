@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.5.4)  9 MAY 2022 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.5.4)  11 MAY 2022 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,94 +369,113 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-<./figures//figureRadBelts_0.png, id=92, 1505.625pt x 702.625pt>
-File: ./figures//figureRadBelts_0.png Graphic file (type png)
-<use ./figures//figureRadBelts_0.png>
-Package pdftex.def Info: ./figures//figureRadBelts_0.png  used on input line 30
-.
-(pdftex.def)             Requested size: 398.33858pt x 185.89453pt.
-<./figures//figureRadBelts_1.png, id=93, 1505.625pt x 813.0375pt>
-File: ./figures//figureRadBelts_1.png Graphic file (type png)
-<use ./figures//figureRadBelts_1.png>
-Package pdftex.def Info: ./figures//figureRadBelts_1.png  used on input line 39
-.
-(pdftex.def)             Requested size: 398.33858pt x 215.10654pt.
+<./figures/en_outfileSun_0.jpg, id=84, 3161.8125pt x 1778.645pt>
+File: ./figures/en_outfileSun_0.jpg Graphic file (type jpg)
+<use ./figures/en_outfileSun_0.jpg>
+Package pdftex.def Info: ./figures/en_outfileSun_0.jpg  used on input line 40.
+(pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./latexText//./figures//fi
-gureRadBelts_0.png (PNG copy)>]
-<./figures//figureULF_0.png, id=104, 2710.125pt x 1395.2125pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<./figures/en_outfileSun_1.jpg, id=97, 3161.8125pt x 1778.645pt>
+File: ./figures/en_outfileSun_1.jpg Graphic file (type jpg)
+<use ./figures/en_outfileSun_1.jpg>
+Package pdftex.def Info: ./figures/en_outfileSun_1.jpg  used on input line 47.
+(pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
+<./figures//figureMIIndex.png, id=98, 1204.5pt x 803.0pt>
+File: ./figures//figureMIIndex.png Graphic file (type png)
+<use ./figures//figureMIIndex.png>
+Package pdftex.def Info: ./figures//figureMIIndex.png  used on input line 56.
+(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
+ [2 <./latexText//./figures/en_outfileSun_0.jpg> <./latexText//./figures/en_out
+fileSun_1.jpg>]
+<./figures//figureRadBelts_0.png, id=103, 1505.625pt x 702.625pt>
+File: ./figures//figureRadBelts_0.png Graphic file (type png)
+<use ./figures//figureRadBelts_0.png>
+Package pdftex.def Info: ./figures//figureRadBelts_0.png  used on input line 75
+.
+(pdftex.def)             Requested size: 398.33858pt x 185.89453pt.
+ [3 <./latexText//./figures//figureMIIndex.png (PNG copy)>]
+<./figures//figureRadBelts_1.png, id=108, 1505.625pt x 813.0375pt>
+File: ./figures//figureRadBelts_1.png Graphic file (type png)
+<use ./figures//figureRadBelts_1.png>
+Package pdftex.def Info: ./figures//figureRadBelts_1.png  used on input line 84
+.
+(pdftex.def)             Requested size: 398.33858pt x 215.10654pt.
+ [4 <./latexText//./figures//figureRadBelts_0.png (PNG copy)> <./latexText//./f
+igures//figureRadBelts_1.png (PNG copy)>]
+<./figures//figureULF_0.png, id=115, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_0.png Graphic file (type png)
 <use ./figures//figureULF_0.png>
-Package pdftex.def Info: ./figures//figureULF_0.png  used on input line 53.
+Package pdftex.def Info: ./figures//figureULF_0.png  used on input line 98.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
- [2 <./latexText//./figures//figureRadBelts_1.png (PNG copy)>]
-<./figures//figureULF_1.png, id=110, 2710.125pt x 1395.2125pt>
+<./figures//figureULF_1.png, id=116, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_1.png Graphic file (type png)
 <use ./figures//figureULF_1.png>
-Package pdftex.def Info: ./figures//figureULF_1.png  used on input line 67.
+Package pdftex.def Info: ./figures//figureULF_1.png  used on input line 112.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
-<./figures//figureULF_2.png, id=111, 2710.125pt x 1395.2125pt>
+ [5 <./latexText//./figures//figureULF_0.png (PNG copy)>]
+<./figures//figureULF_2.png, id=122, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_2.png Graphic file (type png)
 <use ./figures//figureULF_2.png>
-Package pdftex.def Info: ./figures//figureULF_2.png  used on input line 81.
+Package pdftex.def Info: ./figures//figureULF_2.png  used on input line 126.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
- [3 <./latexText//./figures//figureULF_0.png (PNG copy)> <./latexText//./figure
-s//figureULF_1.png (PNG copy)>]
-<./figures//figureEMIC_1.png, id=118, 5869.93pt x 4147.495pt>
+ [6 <./latexText//./figures//figureULF_1.png (PNG copy)> <./latexText//./figure
+s//figureULF_2.png (PNG copy)>]
+<./figures//figureEMIC_1.png, id=129, 5869.93pt x 4147.495pt>
 File: ./figures//figureEMIC_1.png Graphic file (type png)
 <use ./figures//figureEMIC_1.png>
-Package pdftex.def Info: ./figures//figureEMIC_1.png  used on input line 110.
+Package pdftex.def Info: ./figures//figureEMIC_1.png  used on input line 155.
 (pdftex.def)             Requested size: 398.33858pt x 281.43105pt.
- [4 <./latexText//./figures//figureULF_2.png (PNG copy)>]
-<./figures//figureGeomag_0.png, id=124, 1204.5pt x 803.0pt>
+<./figures//figureGeomag_0.png, id=130, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_0.png Graphic file (type png)
 <use ./figures//figureGeomag_0.png>
-Package pdftex.def Info: ./figures//figureGeomag_0.png  used on input line 121.
+Package pdftex.def Info: ./figures//figureGeomag_0.png  used on input line 166.
 
 (pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
-<./figures//figureGeomag_1.png, id=125, 1204.5pt x 803.0pt>
+ [7 <./latexText//./figures//figureEMIC_1.png (PNG copy)>]
+<./figures//figureGeomag_1.png, id=136, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_1.png Graphic file (type png)
 <use ./figures//figureGeomag_1.png>
-Package pdftex.def Info: ./figures//figureGeomag_1.png  used on input line 129.
+Package pdftex.def Info: ./figures//figureGeomag_1.png  used on input line 174.
 
 (pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
- [5 <./latexText//./figures//figureEMIC_1.png (PNG copy)> <./latexText//./figur
-es//figureGeomag_0.png (PNG copy)>]
-<./figures//figureGeomag_2.png, id=130, 702.625pt x 451.6875pt>
+<./figures//figureGeomag_2.png, id=137, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_2.png Graphic file (type png)
 <use ./figures//figureGeomag_2.png>
-Package pdftex.def Info: ./figures//figureGeomag_2.png  used on input line 137.
+Package pdftex.def Info: ./figures//figureGeomag_2.png  used on input line 182.
 
 (pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
-<./figures//figureGeomag_3.png, id=132, 702.625pt x 451.6875pt>
+
+[8 <./latexText//./figures//figureGeomag_0.png (PNG copy)> <./latexText//./figu
+res//figureGeomag_1.png (PNG copy)>]
+<./figures//figureGeomag_3.png, id=143, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_3.png Graphic file (type png)
 <use ./figures//figureGeomag_3.png>
-Package pdftex.def Info: ./figures//figureGeomag_3.png  used on input line 145.
+Package pdftex.def Info: ./figures//figureGeomag_3.png  used on input line 190.
 
 (pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
- [6 <./latexText//./figures//figureGeomag_1.png (PNG copy)> <./latexText//./fig
-ures//figureGeomag_2.png>]
-<./figures//figureGeomag_4.png, id=138, 1204.5pt x 677.53125pt>
+<./figures//figureGeomag_4.png, id=144, 1204.5pt x 677.53125pt>
 File: ./figures//figureGeomag_4.png Graphic file (type png)
 <use ./figures//figureGeomag_4.png>
-Package pdftex.def Info: ./figures//figureGeomag_4.png  used on input line 153.
+Package pdftex.def Info: ./figures//figureGeomag_4.png  used on input line 198.
 
 (pdftex.def)             Requested size: 398.33858pt x 224.06155pt.
-<./figures//figureGeomag_5.png, id=139, 742.775pt x 225.84375pt>
+ [9 <./latexText//./figures//figureGeomag_2.png> <./latexText//./figures//figur
+eGeomag_3.png>]
+<./figures//figureGeomag_5.png, id=151, 742.775pt x 225.84375pt>
 File: ./figures//figureGeomag_5.png Graphic file (type png)
 <use ./figures//figureGeomag_5.png>
-Package pdftex.def Info: ./figures//figureGeomag_5.png  used on input line 161.
+Package pdftex.def Info: ./figures//figureGeomag_5.png  used on input line 206.
 
 (pdftex.def)             Requested size: 398.33858pt x 121.11984pt.
-<./figures//figureGeomag_6.png, id=140, 602.25pt x 421.575pt>
+<./figures//figureGeomag_6.png, id=152, 602.25pt x 421.575pt>
 File: ./figures//figureGeomag_6.png Graphic file (type png)
 <use ./figures//figureGeomag_6.png>
-Package pdftex.def Info: ./figures//figureGeomag_6.png  used on input line 169.
+Package pdftex.def Info: ./figures//figureGeomag_6.png  used on input line 214.
 
 (pdftex.def)             Requested size: 398.33858pt x 278.84502pt.
- [7 <./latexText//./figures//figureGeomag_3.png> <./latexText//./figures//figur
-eGeomag_4.png> <./latexText//./figures//figureGeomag_5.png>]
+
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -464,91 +483,71 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.174 \begin{itemize}
+l.219 \begin{itemize}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<./figures//BoaVista.png, id=149, 872.25874pt x 621.32124pt>
+[10 <./latexText//./figures//figureGeomag_4.png> <./latexText//./figures//figur
+eGeomag_5.png> <./latexText//./figures//figureGeomag_6.png>]
+<./figures//BoaVista.png, id=160, 872.25874pt x 621.32124pt>
 File: ./figures//BoaVista.png Graphic file (type png)
 <use ./figures//BoaVista.png>
-Package pdftex.def Info: ./figures//BoaVista.png  used on input line 199.
+Package pdftex.def Info: ./figures//BoaVista.png  used on input line 244.
 (pdftex.def)             Requested size: 398.33858pt x 283.73499pt.
-[8 <./latexText//./figures//figureGeomag_6.png>]
-<./figures//CachoeiraPaulista.png, id=157, 846.16125pt x 631.35875pt>
+<./figures//CachoeiraPaulista.png, id=161, 846.16125pt x 631.35875pt>
 File: ./figures//CachoeiraPaulista.png Graphic file (type png)
 <use ./figures//CachoeiraPaulista.png>
 Package pdftex.def Info: ./figures//CachoeiraPaulista.png  used on input line 2
-10.
+55.
 (pdftex.def)             Requested size: 398.33858pt x 297.21071pt.
- [9 <./latexText//./figures//BoaVista.png (PNG copy)> <./latexText//./figures//
-CachoeiraPaulista.png (PNG copy)>]
-<./figures//SãoLuís.png, id=162, 852.18375pt x 623.32875pt>
+ [11 <./latexText//./figures//BoaVista.png (PNG copy)>]
+<./figures//SãoLuís.png, id=166, 852.18375pt x 623.32875pt>
 File: ./figures//SãoLuís.png Graphic file (type png)
 <use ./figures//SãoLuís.png>
-Package pdftex.def Info: ./figures//SãoLuís.png  used on input line 221.
+Package pdftex.def Info: ./figures//SãoLuís.png  used on input line 266.
 (pdftex.def)             Requested size: 398.33858pt x 291.36667pt.
-<./figures/en_outfileScint_0.jpg, id=163, 4150.50626pt x 5868.92625pt>
+ [12 <./latexText//./figures//CachoeiraPaulista.png (PNG copy)> <./latexText//.
+/figures//SãoLuís.png (PNG copy)>]
+<./figures/en_outfileScint_0.jpg, id=171, 4150.50626pt x 5868.92625pt>
 File: ./figures/en_outfileScint_0.jpg Graphic file (type jpg)
 <use ./figures/en_outfileScint_0.jpg>
-Package pdftex.def Info: ./figures/en_outfileScint_0.jpg  used on input line 24
-3.
+Package pdftex.def Info: ./figures/en_outfileScint_0.jpg  used on input line 28
+8.
 (pdftex.def)             Requested size: 398.33858pt x 563.1956pt.
- [10 <./latexText//./figures//SãoLuís.png (PNG copy)>]
-<./figures/en_outfileScint_1.jpg, id=168, 4150.50626pt x 5868.92625pt>
+
+[13]
+<./figures/en_outfileScint_1.jpg, id=178, 4150.50626pt x 5868.92625pt>
 File: ./figures/en_outfileScint_1.jpg Graphic file (type jpg)
 <use ./figures/en_outfileScint_1.jpg>
-Package pdftex.def Info: ./figures/en_outfileScint_1.jpg  used on input line 25
-0.
+Package pdftex.def Info: ./figures/en_outfileScint_1.jpg  used on input line 29
+5.
 (pdftex.def)             Requested size: 398.33858pt x 563.1956pt.
- [11 <./latexText//./figures/en_outfileScint_0.jpg>] [12 <./latexText//./figure
+ [14 <./latexText//./figures/en_outfileScint_0.jpg>] [15 <./latexText//./figure
 s/en_outfileScint_1.jpg>] (./latexText//reportSpaceWeather_En.aux)
-
-Package rerunfilecheck Warning: File `reportSpaceWeather_En.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `reportSpaceWeather_En.out':
-(rerunfilecheck)             Before: 18F335B4631E427AA0717A7FEE1B86B2;3452
-(rerunfilecheck)             After:  C797B1665327467537385A1E9AF24FDB;2551.
+Package rerunfilecheck Info: File `reportSpaceWeather_En.out' has not changed.
+(rerunfilecheck)             Checksum: B78857F707E6E104CE4530D26FD0DDD1;3186.
  ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 478276
- 165569 string characters out of 5853014
- 467900 words of memory out of 5000000
- 28448 multiletter control sequences out of 15000+600000
- 476064 words of font info for 53 fonts, out of 8000000 for 9000
+ 10456 strings out of 478276
+ 166313 string characters out of 5853014
+ 471897 words of memory out of 5000000
+ 28471 multiletter control sequences out of 15000+600000
+ 477312 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,901b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.11.1} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.11} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.10.1} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.9.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on ./latexText//reportSpaceWeather_En.pdf (12 pages, 25495398 by
+ 60i,6n,63p,910b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-di
+st/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on ./latexText//reportSpaceWeather_En.pdf (15 pages, 26450622 by
 tes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 267 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

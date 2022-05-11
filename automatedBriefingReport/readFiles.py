@@ -26,7 +26,7 @@ def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
             text += page.get_text()
 
     regexPt = r"(?<=Summary)(.|\n)*(?=Resumo)"
-    regexEn = r"(?<=Resumo)(.|\n)*(?=END)"
+    regexEn = r"(?<=Resumo)(.|\n)*"
 
     matches = re.search(regexPt, text, re.MULTILINE)
     if matches:
@@ -36,6 +36,7 @@ def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
     matches = re.search(regexEn, text, re.MULTILINE)
     if matches:
         ttextEn = matches.group()
+        ttextEn.replace('END', '')
     else:
         ttextEn = ''
 
@@ -90,7 +91,6 @@ def extractFiguresTextSun_1(docPath, filename, outputFigure, responsible):
     textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n'  %(responsible)  +extractItemize(ttextPt) + '\n'
     texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n'  %(responsible) +extractItemize(ttextEn) +'\n'
 
-    print(pathEn)
     
     figures = """
     \\begin{figure}[H]
@@ -135,8 +135,15 @@ def extractFiguresTextInterplMedium(docPath, filename):
         if shapes.has_text_frame:
             textpt += shapes.text
 
-    textpt = textpt.split('última semana.', 1)[1]
-    texten = texten.split('\x0b\x0b', 1)[1]
+    splitPt = textpt.split('ltima semana.', 1)
+    splitEn = texten.split('\x0b\x0b', 1)
+    patternEn = r"(?i)past.*week\."
+    if len(splitEn) < 2:
+        splitEn = texten.split('\x0b', 1)
+        if len(splitEn) < 2:
+            splitEn = re.split(patternEn, aas[1])
+    textpt = splitPt[1]
+    texten = splitEn[1]
 
     return texten.split('\n'), textpt.split('\n'), images, z
 
