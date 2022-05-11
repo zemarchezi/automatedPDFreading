@@ -202,10 +202,10 @@ for f in files_fig:
     except OSError as e:
         print("Error: %s : %s" % (f, e.strerror))
 
-# for f in files:
-#     try:
-#         os.remove(f)
-#     except OSError as e:
-#         print("Error: %s : %s" % (f, e.strerror))
-# # os.system(outhpathlatex)
+for f in files:
+    try:
+        os.remove(f)
+    except OSError as e:
+        print("Error: %s : %s" % (f, e.strerror))
+# os.system(outhpathlatex)
 # %%
