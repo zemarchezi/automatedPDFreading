@@ -19,11 +19,17 @@ class extractFiles():
         self.latexTextPt = ''
         for area in self.dictPaths.keys():
             if len(self.dictPaths[area].keys()) < 2:
-                filename = self.dictPaths[area]['path'].split('/')[-1]
-                dirpath = '/'.join(self.dictPaths[area]['path'].split('/')[0:-1])+'/'
+                try:
+                    filename = self.dictPaths[area]['path'].split('/')[-1]
+                    dirpath = '/'.join(self.dictPaths[area]['path'].split('/')[0:-1])+'/'
+                    logger.info(filename)
+                except (Exception) as e:
+                    logger.error(e)
+                    textpt = ''
+                    texten = ''
+                    logger.error(f"--- Error, there is no files in data.")
             if area == '01Sun':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextSun_0(docPath=dirpath, 
                                                             filename=filename, 
@@ -33,10 +39,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '02Sun':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextSun_1(docPath=dirpath, 
                                                             filename=filename, 
@@ -46,10 +51,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '03MeioInterp':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = constructLatexFileInterpMedium(docPath=dirpath, 
                                                             filename=filename, 
@@ -59,10 +63,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '04RadBelt':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     filenamept = self.dictPaths[area]['pathPt'].split('/')[-1]
                     dirpathpt = '/'.join(self.dictPaths[area]['pathPt'].split('/')[0:-1])+'/'
@@ -72,7 +75,7 @@ class extractFiles():
                                                             filename=filenamept, 
                                                             outputFigure=self.outputimage, 
                                                             responsible=self.dictResponsible[area])
-                    texten = constructLatexFileRadBelts(docPath=dirpathpt, 
+                    texten = constructLatexFileRadBelts(docPath=dirpathen, 
                                                             filename=filenameen, 
                                                             outputFigure=self.outputimage, 
                                                             responsible=self.dictResponsible[area])
@@ -80,10 +83,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '05ULF':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextULF(docPath=dirpath, 
                                                             filename=filename, 
@@ -93,10 +95,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} -- Error")
             if area == '06EMIC':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextEMIC(docPath=dirpath, 
                                                             filename=filename, 
@@ -106,10 +107,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '07Geomag':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = constructLatexFileGeomag(docPath=dirpath, 
                                                             filename=filename, 
@@ -119,10 +119,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '08Ionosfera':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = constructLatexFileIonosphere(docPath=dirpath, 
                                                             filename=filename, 
@@ -132,10 +131,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '09Scintilation':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextScint(docPath=dirpath, 
                                                             filename=filename, 
@@ -145,10 +143,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '10Imager':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = extractFiguresTextImager(docPath=dirpath, 
                                                             filename=filename, 
@@ -158,10 +155,9 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             if area == '11ROTI':
                 logger.info(area)
-                logger.info(filename)
                 try:
                     texten, textpt = constructLatexFileRoti(docPath=dirpath, 
                                                             filename=filename, 
@@ -171,7 +167,7 @@ class extractFiles():
                     logger.error(e)
                     textpt = ''
                     texten = ''
-                    logger.error(f"{area} {filenamept} --- Error")
+                    logger.error(f"{area} --- Error")
             self.latexTextEn += texten
             self.latexTextPt += textpt
         logger.warning("Done extractin!")
