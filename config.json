@@ -1,0 +1,18 @@
+{
+    "dataPath": "./data/",
+    "outputimagePath": "./latexText/figures/",
+    "dictResponsible": {"01Sun": "Name",
+                        "02Sun": "Name",
+                        "03MeioInterp": "Name",
+                        "04RadBelt": "Name",
+                        "05ULF": "Name",
+                        "06EMIC": "Name",
+                        "07Geomag": "Name",
+                        "08Ionosfera": "Name",
+                        "09Scintilation": "Name",
+                        "10Imager": "Name",
+                        "11ROTI": "Name"},
+    "generateLatex": true,
+    "compileLatex": true,
+    "deleteTempFile": false
+}

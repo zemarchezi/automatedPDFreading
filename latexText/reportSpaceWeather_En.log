@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.5.4)  11 MAY 2022 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.5)  14 MAY 2022 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./latexText/reportSpaceWeather_En.tex
 (./latexText/reportSpaceWeather_En.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
@@ -23,18 +23,18 @@ File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count193
 \Gm@cntv=\count194
@@ -49,30 +49,30 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks17
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
 )
-(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
@@ -81,36 +81,36 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
 )
-(/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/02/26 3.73 The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count196
 \U@D=\dimen149
-\l@unhyphenated=\language87
+\l@unhyphenated=\language6
 
-(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count197
 
-(/usr/share/texmf-dist/tex/generic/babel-portuges/brazil.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language70). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
-(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-(/usr/share/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count198
 \float@exts=\toks21
@@ -118,103 +118,107 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box51
 )
-(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
-(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen150
 \Hy@linkcounter=\count199
 \Hy@pagecounter=\count266
 
-(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count267
 
-(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4137.
-Package hyperref Info: Link nesting OFF on input line 4142.
-Package hyperref Info: Hyper index ON on input line 4145.
-Package hyperref Info: Plain pages OFF on input line 4152.
-Package hyperref Info: Backreferencing OFF on input line 4157.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4390.
+Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count268
 
-(/usr/share/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4749.
+LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen151
 
-(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count269
 \Field@Width=\dimen152
 \Fld@charsize=\dimen153
-Package hyperref Info: Hyper figures OFF on input line 6027.
-Package hyperref Info: Link nesting OFF on input line 6032.
-Package hyperref Info: Hyper index ON on input line 6035.
-Package hyperref Info: backreferencing OFF on input line 6042.
-Package hyperref Info: Link coloring OFF on input line 6047.
-Package hyperref Info: Link coloring with OCG OFF on input line 6052.
-Package hyperref Info: PDF/A mode OFF on input line 6057.
-LaTeX Info: Redefining \ref on input line 6097.
-LaTeX Info: Redefining \pageref on input line 6101.
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
 
-(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -224,10 +228,10 @@ package with kernel methods
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 
-(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
@@ -235,10 +239,10 @@ with kernel methods
 \Fld@listcount=\count273
 \c@bookmark@seq@number=\count274
 
-(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -246,7 +250,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 )
-(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
 \f@nch@headwidth=\skip50
@@ -259,11 +263,11 @@ rs
 \f@nch@O@olf=\skip57
 \f@nch@O@orf=\skip58
 )
-(/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box52
 )
@@ -323,7 +327,7 @@ LaTeX Font Info:    ... okay on input line 21.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count276
 \scratchdimen=\dimen154
@@ -336,24 +340,24 @@ LaTeX Font Info:    ... okay on input line 21.
 \MPnumerator=\count280
 \makeMPintoPDFobject=\count281
 \everyMPtoPDFconversion=\toks24
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 21.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count282
@@ -370,24 +374,24 @@ LaTeX Info: Redefining \nameref on input line 21.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
 
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: No \author given.
 
-<./figures/en_outfileSun_0.jpg, id=84, 3161.8125pt x 1778.645pt>
+<./figures/en_outfileSun_0.jpg, id=92, 3161.8125pt x 1778.645pt>
 File: ./figures/en_outfileSun_0.jpg Graphic file (type jpg)
 <use ./figures/en_outfileSun_0.jpg>
 Package pdftex.def Info: ./figures/en_outfileSun_0.jpg  used on input line 44.
 (pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
-<embracetopimage.png, id=85, 831.105pt x 86.724pt>
+<embracetopimage.png, id=93, 831.105pt x 86.724pt>
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
 Package pdftex.def Info: embracetopimage.png  used on input line 46.
@@ -403,12 +407,12 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./latexText//embracetopimage.png>]
-<./figures/en_outfileSun_1.jpg, id=100, 3161.8125pt x 1778.645pt>
+<./figures/en_outfileSun_1.jpg, id=108, 3161.8125pt x 1778.645pt>
 File: ./figures/en_outfileSun_1.jpg Graphic file (type jpg)
 <use ./figures/en_outfileSun_1.jpg>
 Package pdftex.def Info: ./figures/en_outfileSun_1.jpg  used on input line 51.
 (pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
-<./figures//figureMIIndex.png, id=101, 1204.5pt x 803.0pt>
+<./figures//figureMIIndex.png, id=109, 1204.5pt x 803.0pt>
 File: ./figures//figureMIIndex.png Graphic file (type png)
 <use ./figures//figureMIIndex.png>
 Package pdftex.def Info: ./figures//figureMIIndex.png  used on input line 60.
@@ -428,7 +432,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [2 <./latexText//./figures/en_outfileSun_0.jpg> <./latexText//./figures/en_outf
 ileSun_1.jpg>]
-<./figures//figureRadBelts_0.png, id=106, 1505.625pt x 702.625pt>
+<./figures//figureRadBelts_0.png, id=114, 1505.625pt x 702.625pt>
 File: ./figures//figureRadBelts_0.png Graphic file (type png)
 <use ./figures//figureRadBelts_0.png>
 Package pdftex.def Info: ./figures//figureRadBelts_0.png  used on input line 79
@@ -448,7 +452,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [3 <./latexText//./figures//figureMIIndex.png (PNG copy)>]
-<./figures//figureRadBelts_1.png, id=111, 1505.625pt x 813.0375pt>
+<./figures//figureRadBelts_1.png, id=119, 1505.625pt x 813.0375pt>
 File: ./figures//figureRadBelts_1.png Graphic file (type png)
 <use ./figures//figureRadBelts_1.png>
 Package pdftex.def Info: ./figures//figureRadBelts_1.png  used on input line 88
@@ -469,17 +473,17 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [4 <./latexText//./figures//figureRadBelts_0.png (PNG copy)> <./latexText//./fi
 gures//figureRadBelts_1.png (PNG copy)>]
-<./figures//figureULF_0.png, id=118, 2710.125pt x 1395.2125pt>
+<./figures//figureULF_0.png, id=126, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_0.png Graphic file (type png)
 <use ./figures//figureULF_0.png>
 Package pdftex.def Info: ./figures//figureULF_0.png  used on input line 102.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
-<./figures//figureULF_1.png, id=119, 2710.125pt x 1395.2125pt>
+<./figures//figureULF_1.png, id=127, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_1.png Graphic file (type png)
 <use ./figures//figureULF_1.png>
 Package pdftex.def Info: ./figures//figureULF_1.png  used on input line 116.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
-<./figures//figureULF_2.png, id=120, 2710.125pt x 1395.2125pt>
+<./figures//figureULF_2.png, id=128, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_2.png Graphic file (type png)
 <use ./figures//figureULF_2.png>
 Package pdftex.def Info: ./figures//figureULF_2.png  used on input line 130.
@@ -499,7 +503,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [5 <./latexText//./figures//figureULF_0.png (PNG copy)> <./latexText//./figures
 //figureULF_1.png (PNG copy)>]
-<./figures//figureEMIC_1.png, id=127, 5869.93pt x 4147.495pt>
+<./figures//figureEMIC_1.png, id=135, 5869.93pt x 4147.495pt>
 File: ./figures//figureEMIC_1.png Graphic file (type png)
 <use ./figures//figureEMIC_1.png>
 Package pdftex.def Info: ./figures//figureEMIC_1.png  used on input line 159.
@@ -518,13 +522,13 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [6 <./latexText//./figures//figureULF_2.png (PNG copy)>]
-<./figures//figureGeomag_0.png, id=133, 1204.5pt x 803.0pt>
+<./figures//figureGeomag_0.png, id=141, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_0.png Graphic file (type png)
 <use ./figures//figureGeomag_0.png>
 Package pdftex.def Info: ./figures//figureGeomag_0.png  used on input line 170.
 
 (pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
-<./figures//figureGeomag_1.png, id=134, 1204.5pt x 803.0pt>
+<./figures//figureGeomag_1.png, id=142, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_1.png Graphic file (type png)
 <use ./figures//figureGeomag_1.png>
 Package pdftex.def Info: ./figures//figureGeomag_1.png  used on input line 178.
@@ -545,13 +549,13 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [7 <./latexText//./figures//figureEMIC_1.png (PNG copy)> <./latexText//./figure
 s//figureGeomag_0.png (PNG copy)>]
-<./figures//figureGeomag_2.png, id=140, 702.625pt x 451.6875pt>
+<./figures//figureGeomag_2.png, id=148, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_2.png Graphic file (type png)
 <use ./figures//figureGeomag_2.png>
 Package pdftex.def Info: ./figures//figureGeomag_2.png  used on input line 186.
 
 (pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
-<./figures//figureGeomag_3.png, id=141, 702.625pt x 451.6875pt>
+<./figures//figureGeomag_3.png, id=149, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_3.png Graphic file (type png)
 <use ./figures//figureGeomag_3.png>
 Package pdftex.def Info: ./figures//figureGeomag_3.png  used on input line 194.
@@ -572,19 +576,19 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [8 <./latexText//./figures//figureGeomag_1.png (PNG copy)> <./latexText//./figu
 res//figureGeomag_2.png>]
-<./figures//figureGeomag_4.png, id=147, 1204.5pt x 677.53125pt>
+<./figures//figureGeomag_4.png, id=155, 1204.5pt x 677.53125pt>
 File: ./figures//figureGeomag_4.png Graphic file (type png)
 <use ./figures//figureGeomag_4.png>
 Package pdftex.def Info: ./figures//figureGeomag_4.png  used on input line 202.
 
 (pdftex.def)             Requested size: 398.33858pt x 224.06155pt.
-<./figures//figureGeomag_5.png, id=148, 742.775pt x 225.84375pt>
+<./figures//figureGeomag_5.png, id=156, 742.775pt x 225.84375pt>
 File: ./figures//figureGeomag_5.png Graphic file (type png)
 <use ./figures//figureGeomag_5.png>
 Package pdftex.def Info: ./figures//figureGeomag_5.png  used on input line 210.
 
 (pdftex.def)             Requested size: 398.33858pt x 121.11984pt.
-<./figures//figureGeomag_6.png, id=149, 602.25pt x 421.575pt>
+<./figures//figureGeomag_6.png, id=157, 602.25pt x 421.575pt>
 File: ./figures//figureGeomag_6.png Graphic file (type png)
 <use ./figures//figureGeomag_6.png>
 Package pdftex.def Info: ./figures//figureGeomag_6.png  used on input line 218.
@@ -617,7 +621,7 @@ l.223 \begin{itemize}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<./figures//BoaVista.png, id=157, 872.25874pt x 621.32124pt>
+<./figures//BoaVista.png, id=165, 872.25874pt x 621.32124pt>
 File: ./figures//BoaVista.png Graphic file (type png)
 <use ./figures//BoaVista.png>
 Package pdftex.def Info: ./figures//BoaVista.png  used on input line 248.
@@ -635,7 +639,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [10 <./latexText//./figures//figureGeomag_6.png>]
-<./figures//CachoeiraPaulista.png, id=163, 846.16125pt x 631.35875pt>
+<./figures//CachoeiraPaulista.png, id=171, 846.16125pt x 631.35875pt>
 File: ./figures//CachoeiraPaulista.png Graphic file (type png)
 <use ./figures//CachoeiraPaulista.png>
 Package pdftex.def Info: ./figures//CachoeiraPaulista.png  used on input line 2
@@ -656,12 +660,12 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 [11 <./latexText//./figures//BoaVista.png (PNG copy)> <./latexText//./figures//
 CachoeiraPaulista.png (PNG copy)>]
-<./figures//SãoLuís.png, id=168, 852.18375pt x 623.32875pt>
+<./figures//SãoLuís.png, id=177, 852.18375pt x 623.32875pt>
 File: ./figures//SãoLuís.png Graphic file (type png)
 <use ./figures//SãoLuís.png>
 Package pdftex.def Info: ./figures//SãoLuís.png  used on input line 270.
 (pdftex.def)             Requested size: 398.33858pt x 291.36667pt.
-<./figures/en_outfileScint_0.jpg, id=169, 4150.50626pt x 5868.92625pt>
+<./figures/en_outfileScint_0.jpg, id=178, 4150.50626pt x 5868.92625pt>
 File: ./figures/en_outfileScint_0.jpg Graphic file (type jpg)
 <use ./figures/en_outfileScint_0.jpg>
 Package pdftex.def Info: ./figures/en_outfileScint_0.jpg  used on input line 29
@@ -681,7 +685,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [12 <./latexText//./figures//SãoLuís.png (PNG copy)>]
-<./figures/en_outfileScint_1.jpg, id=175, 4150.50626pt x 5868.92625pt>
+<./figures/en_outfileScint_1.jpg, id=183, 4150.50626pt x 5868.92625pt>
 File: ./figures/en_outfileScint_1.jpg Graphic file (type jpg)
 <use ./figures/en_outfileScint_1.jpg>
 Package pdftex.def Info: ./figures/en_outfileScint_1.jpg  used on input line 29
@@ -701,9 +705,15 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [13 <./latexText//./figures/en_outfileScint_0.jpg>]
+<./figures//figureImager_0.png, id=189, 3563.3125pt x 2509.375pt>
+File: ./figures//figureImager_0.png Graphic file (type png)
+<use ./figures//figureImager_0.png>
+Package pdftex.def Info: ./figures//figureImager_0.png  used on input line 310.
+
+(pdftex.def)             Requested size: 398.33858pt x 280.51202pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 310.
+Package pdftex.def Info: embracetopimage.png  used on input line 313.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -715,6 +725,20 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [14 <./latexText//./figures/en_outfileScint_1.jpg>]
+File: embracetopimage.png Graphic file (type png)
+<use embracetopimage.png>
+Package pdftex.def Info: embracetopimage.png  used on input line 331.
+(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
+
+
+Package fancyhdr Warning: \headheight is too small (26.0pt): 
+(fancyhdr)                Make it at least 33.28958pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.28958pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
+
+[15 <./latexText//./figures//figureImager_0.png (PNG copy)>]
 (./latexText//reportSpaceWeather_En.aux)
 
 Package rerunfilecheck Warning: File `reportSpaceWeather_En.out' has changed.
@@ -722,29 +746,30 @@ Package rerunfilecheck Warning: File `reportSpaceWeather_En.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `reportSpaceWeather_En.out':
-(rerunfilecheck)             Before: C9CCBCC87455735196A2672AC37986E3;3165
-(rerunfilecheck)             After:  9C7BF20DABF5D9C4CBC7F601471AC3C1;2404.
+(rerunfilecheck)             Before: 4A57B654676FDF56F1A4F0A131E5961C;2670
+(rerunfilecheck)             After:  24B61605221F18E66CA88D13C561605C;2670.
  ) 
 Here is how much of TeX's memory you used:
- 10647 strings out of 478276
- 169033 string characters out of 5853014
- 475805 words of memory out of 5000000
- 28655 multiletter control sequences out of 15000+600000
+ 10701 strings out of 480186
+ 171088 string characters out of 5894356
+ 470918 words of memory out of 5000000
+ 28451 multiletter control sequences out of 15000+600000
  477810 words of font info for 61 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 60i,16n,63p,931b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ./latexText//reportSpaceWeather_En.pdf (14 pages, 26677969 by
+ 38 hyphenation exceptions out of 8191
+ 60i,16n,63p,931b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsl10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.
+pfb>
+Output written on ./latexText//reportSpaceWeather_En.pdf (15 pages, 27490628 by
 tes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 292 words of extra memory for PDF output out of 10000 (max. 10000000)
 

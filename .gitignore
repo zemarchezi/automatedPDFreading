@@ -10,9 +10,14 @@ __pycache__/
 *testes.py
 *generate*
 
-*.log
-*.aux
-*.out
+latexText/*.log
+latexText/*.aux
+latexText/*.out
+latexText/figures/*png
+latexText/figures/*jpg
+
+data/*
+
 
 tests.py
 tests2.py
