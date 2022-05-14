@@ -11,6 +11,17 @@ parser = argparse.ArgumentParser(description='Program to compile the report for 
 parser.add_argument('--dirConfig', action='store', dest='dirConfig',
                            default='config.json', required=False,
                            help='O diretório do arquivo .json de configuração.')
+parser.add_argument('--year', action='store', dest='year',
+                           default='', required=True,
+                           help='Ano no qual o Briefing ocorreu.')
+
+parser.add_argument('--month', action='store', dest='month',
+                           default='', required=True,
+                           help='Mes no qual o Briefing ocorreu.')
+
+parser.add_argument('--day', action='store', dest='day',
+                           default='', required=True,
+                           help='Dia no qual o Briefing ocorreu.')
 
 
 arguments = parser.parse_args()
@@ -28,6 +39,8 @@ files = glob.glob(f"{PATH}*")
 dictPaths = separatePathsAreas(files)
 dictPaths = dict(sorted(dictPaths.items()))
 
+latexFilesPath = configFile["latexPath"]
+
 outputimage = configFile["outputimagePath"]
 
 dictResponsible = configFile["dictResponsible"]
@@ -41,7 +54,10 @@ eF.extractData()
 
 
 if configFile['generateLatex']:
-    eF.constructLatex(outputPath="./latexText", year="2022", month="05", day="09")
+    eF.constructLatex(outputPath=latexFilesPath, 
+                      year=f"{arguments.year}", 
+                      month=f"{arguments.month}", 
+                      day=f"{arguments.day}")
 
 if configFile['compileLatex']:
     eF.compileLatexFile()

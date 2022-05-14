@@ -16,7 +16,7 @@ latexText/*.out
 latexText/figures/*png
 latexText/figures/*jpg
 
-data/*
+data/
 
 
 tests.py
