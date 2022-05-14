@@ -1,5 +1,6 @@
 {
     "dataPath": "./data/",
+    "latexPath": "./latexText",
     "outputimagePath": "./latexText/figures/",
     "dictResponsible": {"01Sun": "Name",
                         "02Sun": "Name",
