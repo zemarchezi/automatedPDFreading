@@ -2,6 +2,7 @@
 import argparse
 import glob
 import json
+from pathlib import Path
 from automatedBriefingReport.extractAllFiles import *
 
 #%%
@@ -40,6 +41,7 @@ dictPaths = separatePathsAreas(files)
 dictPaths = dict(sorted(dictPaths.items()))
 
 latexFilesPath = configFile["latexPath"]
+Path(latexFilesPath).mkdir(parents=True, exist_ok=True)
 
 outputimage = configFile["outputimagePath"]
 
