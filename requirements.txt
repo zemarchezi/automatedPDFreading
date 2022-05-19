@@ -5,7 +5,6 @@ pytesseract
 Wand
 Pillow
 PyMuPDF
-polyglot
 langdetect
 pyicu
 pycld2
