@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.5.4)  11 MAY 2022 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.16)  19 MAY 2022 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./latexText/reportSpaceWeather_Pt.tex
 (./latexText/reportSpaceWeather_Pt.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
+L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
@@ -263,7 +263,7 @@ rs
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box52
 )
@@ -382,15 +382,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+
+ []
+
 <./figures/pt_outfileSun_0.jpg, id=84, 3161.8125pt x 1778.645pt>
 File: ./figures/pt_outfileSun_0.jpg Graphic file (type jpg)
 <use ./figures/pt_outfileSun_0.jpg>
-Package pdftex.def Info: ./figures/pt_outfileSun_0.jpg  used on input line 45.
+Package pdftex.def Info: ./figures/pt_outfileSun_0.jpg  used on input line 49.
 (pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
 <embracetopimage.png, id=85, 831.105pt x 86.724pt>
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 47.
+Package pdftex.def Info: embracetopimage.png  used on input line 51.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 Package fancyhdr Warning: \headheight is too small (26.0pt): 
@@ -406,16 +411,16 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 <./figures/pt_outfileSun_1.jpg, id=100, 3161.8125pt x 1778.645pt>
 File: ./figures/pt_outfileSun_1.jpg Graphic file (type jpg)
 <use ./figures/pt_outfileSun_1.jpg>
-Package pdftex.def Info: ./figures/pt_outfileSun_1.jpg  used on input line 52.
+Package pdftex.def Info: ./figures/pt_outfileSun_1.jpg  used on input line 56.
 (pdftex.def)             Requested size: 398.33858pt x 224.06703pt.
 <./figures//figureMIIndex.png, id=101, 1204.5pt x 803.0pt>
 File: ./figures//figureMIIndex.png Graphic file (type png)
 <use ./figures//figureMIIndex.png>
-Package pdftex.def Info: ./figures//figureMIIndex.png  used on input line 61.
+Package pdftex.def Info: ./figures//figureMIIndex.png  used on input line 65.
 (pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 64.
+Package pdftex.def Info: embracetopimage.png  used on input line 68.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -431,12 +436,12 @@ ileSun_1.jpg>]
 <./figures//figureRadBelts_0.png, id=106, 1505.625pt x 702.625pt>
 File: ./figures//figureRadBelts_0.png Graphic file (type png)
 <use ./figures//figureRadBelts_0.png>
-Package pdftex.def Info: ./figures//figureRadBelts_0.png  used on input line 81
+Package pdftex.def Info: ./figures//figureRadBelts_0.png  used on input line 85
 .
 (pdftex.def)             Requested size: 398.33858pt x 185.89453pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 85.
+Package pdftex.def Info: embracetopimage.png  used on input line 89.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -451,12 +456,12 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 <./figures//figureRadBelts_1.png, id=111, 1505.625pt x 813.0375pt>
 File: ./figures//figureRadBelts_1.png Graphic file (type png)
 <use ./figures//figureRadBelts_1.png>
-Package pdftex.def Info: ./figures//figureRadBelts_1.png  used on input line 90
+Package pdftex.def Info: ./figures//figureRadBelts_1.png  used on input line 94
 .
 (pdftex.def)             Requested size: 398.33858pt x 215.10654pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 98.
+Package pdftex.def Info: embracetopimage.png  used on input line 102.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -472,21 +477,21 @@ gures//figureRadBelts_1.png (PNG copy)>]
 <./figures//figureULF_0.png, id=118, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_0.png Graphic file (type png)
 <use ./figures//figureULF_0.png>
-Package pdftex.def Info: ./figures//figureULF_0.png  used on input line 108.
+Package pdftex.def Info: ./figures//figureULF_0.png  used on input line 112.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
 <./figures//figureULF_1.png, id=119, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_1.png Graphic file (type png)
 <use ./figures//figureULF_1.png>
-Package pdftex.def Info: ./figures//figureULF_1.png  used on input line 122.
+Package pdftex.def Info: ./figures//figureULF_1.png  used on input line 126.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
 <./figures//figureULF_2.png, id=120, 2710.125pt x 1395.2125pt>
 File: ./figures//figureULF_2.png Graphic file (type png)
 <use ./figures//figureULF_2.png>
-Package pdftex.def Info: ./figures//figureULF_2.png  used on input line 135.
+Package pdftex.def Info: ./figures//figureULF_2.png  used on input line 139.
 (pdftex.def)             Requested size: 398.33858pt x 205.05757pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 143.
+Package pdftex.def Info: embracetopimage.png  used on input line 147.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -502,11 +507,11 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 <./figures//figureEMIC_1.png, id=127, 5869.93pt x 4147.495pt>
 File: ./figures//figureEMIC_1.png Graphic file (type png)
 <use ./figures//figureEMIC_1.png>
-Package pdftex.def Info: ./figures//figureEMIC_1.png  used on input line 163.
+Package pdftex.def Info: ./figures//figureEMIC_1.png  used on input line 169.
 (pdftex.def)             Requested size: 398.33858pt x 281.43105pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 166.
+Package pdftex.def Info: embracetopimage.png  used on input line 172.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -518,21 +523,20 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [6 <./latexText//./figures//figureULF_2.png (PNG copy)>]
-<./figures//figureGeomag_0.png, id=133, 1204.5pt x 803.0pt>
+<./figures//figureEMIC_2.png, id=133, 5869.93pt x 4147.495pt>
+File: ./figures//figureEMIC_2.png Graphic file (type png)
+<use ./figures//figureEMIC_2.png>
+Package pdftex.def Info: ./figures//figureEMIC_2.png  used on input line 177.
+(pdftex.def)             Requested size: 398.33858pt x 281.43105pt.
+<./figures//figureGeomag_0.png, id=134, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_0.png Graphic file (type png)
 <use ./figures//figureGeomag_0.png>
-Package pdftex.def Info: ./figures//figureGeomag_0.png  used on input line 174.
-
-(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
-<./figures//figureGeomag_1.png, id=134, 1204.5pt x 803.0pt>
-File: ./figures//figureGeomag_1.png Graphic file (type png)
-<use ./figures//figureGeomag_1.png>
-Package pdftex.def Info: ./figures//figureGeomag_1.png  used on input line 182.
+Package pdftex.def Info: ./figures//figureGeomag_0.png  used on input line 188.
 
 (pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 185.
+Package pdftex.def Info: embracetopimage.png  used on input line 191.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -544,22 +548,49 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
 [7 <./latexText//./figures//figureEMIC_1.png (PNG copy)> <./latexText//./figure
-s//figureGeomag_0.png (PNG copy)>]
-<./figures//figureGeomag_2.png, id=140, 702.625pt x 451.6875pt>
+s//figureEMIC_2.png (PNG copy)>]
+<./figures//figureGeomag_1.png, id=140, 1204.5pt x 803.0pt>
+File: ./figures//figureGeomag_1.png Graphic file (type png)
+<use ./figures//figureGeomag_1.png>
+Package pdftex.def Info: ./figures//figureGeomag_1.png  used on input line 196.
+
+(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
+<./figures//figureGeomag_2.png, id=141, 1204.5pt x 803.0pt>
 File: ./figures//figureGeomag_2.png Graphic file (type png)
 <use ./figures//figureGeomag_2.png>
-Package pdftex.def Info: ./figures//figureGeomag_2.png  used on input line 190.
+Package pdftex.def Info: ./figures//figureGeomag_2.png  used on input line 204.
 
-(pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
-<./figures//figureGeomag_3.png, id=141, 702.625pt x 451.6875pt>
+(pdftex.def)             Requested size: 398.33858pt x 265.55444pt.
+File: embracetopimage.png Graphic file (type png)
+<use embracetopimage.png>
+Package pdftex.def Info: embracetopimage.png  used on input line 207.
+(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
+
+
+Package fancyhdr Warning: \headheight is too small (26.0pt): 
+(fancyhdr)                Make it at least 33.28958pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.28958pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
+
+[8 <./latexText//./figures//figureGeomag_0.png> <./latexText//./figures//figure
+Geomag_1.png (PNG copy)>]
+<./figures//figureGeomag_3.png, id=147, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_3.png Graphic file (type png)
 <use ./figures//figureGeomag_3.png>
-Package pdftex.def Info: ./figures//figureGeomag_3.png  used on input line 198.
+Package pdftex.def Info: ./figures//figureGeomag_3.png  used on input line 212.
+
+(pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
+<./figures//figureGeomag_4.png, id=148, 702.625pt x 451.6875pt>
+File: ./figures//figureGeomag_4.png Graphic file (type png)
+<use ./figures//figureGeomag_4.png>
+Package pdftex.def Info: ./figures//figureGeomag_4.png  used on input line 220.
 
 (pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 201.
+Package pdftex.def Info: embracetopimage.png  used on input line 223.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -570,29 +601,23 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
-[8 <./latexText//./figures//figureGeomag_1.png (PNG copy)> <./latexText//./figu
-res//figureGeomag_2.png>]
-<./figures//figureGeomag_4.png, id=147, 1204.5pt x 677.53125pt>
-File: ./figures//figureGeomag_4.png Graphic file (type png)
-<use ./figures//figureGeomag_4.png>
-Package pdftex.def Info: ./figures//figureGeomag_4.png  used on input line 206.
-
-(pdftex.def)             Requested size: 398.33858pt x 224.06155pt.
-<./figures//figureGeomag_5.png, id=148, 742.775pt x 225.84375pt>
+[9 <./latexText//./figures//figureGeomag_2.png (PNG copy)> <./latexText//./figu
+res//figureGeomag_3.png>]
+<./figures//figureGeomag_5.png, id=154, 702.625pt x 451.6875pt>
 File: ./figures//figureGeomag_5.png Graphic file (type png)
 <use ./figures//figureGeomag_5.png>
-Package pdftex.def Info: ./figures//figureGeomag_5.png  used on input line 214.
+Package pdftex.def Info: ./figures//figureGeomag_5.png  used on input line 228.
 
-(pdftex.def)             Requested size: 398.33858pt x 121.11984pt.
-<./figures//figureGeomag_6.png, id=149, 602.25pt x 421.575pt>
+(pdftex.def)             Requested size: 398.33858pt x 256.07921pt.
+<./figures//figureGeomag_6.png, id=155, 1204.5pt x 677.53125pt>
 File: ./figures//figureGeomag_6.png Graphic file (type png)
 <use ./figures//figureGeomag_6.png>
-Package pdftex.def Info: ./figures//figureGeomag_6.png  used on input line 222.
+Package pdftex.def Info: ./figures//figureGeomag_6.png  used on input line 236.
 
-(pdftex.def)             Requested size: 398.33858pt x 278.84502pt.
+(pdftex.def)             Requested size: 398.33858pt x 224.06155pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 225.
+Package pdftex.def Info: embracetopimage.png  used on input line 239.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -603,36 +628,49 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
-[9 <./latexText//./figures//figureGeomag_3.png> <./latexText//./figures//figure
-Geomag_4.png> <./latexText//./figures//figureGeomag_5.png>]
-<./figures//BoaVista.png, id=157, 872.25874pt x 621.32124pt>
+[10 <./latexText//./figures//figureGeomag_4.png> <./latexText//./figures//figur
+eGeomag_5.png>]
+<./figures//figureGeomag_7.png, id=162, 742.775pt x 225.84375pt>
+File: ./figures//figureGeomag_7.png Graphic file (type png)
+<use ./figures//figureGeomag_7.png>
+Package pdftex.def Info: ./figures//figureGeomag_7.png  used on input line 244.
+
+(pdftex.def)             Requested size: 398.33858pt x 121.11984pt.
+<./figures//figureGeomag_8.png, id=163, 1505.625pt x 1053.9375pt>
+File: ./figures//figureGeomag_8.png Graphic file (type png)
+<use ./figures//figureGeomag_8.png>
+Package pdftex.def Info: ./figures//figureGeomag_8.png  used on input line 252.
+
+(pdftex.def)             Requested size: 398.33858pt x 278.84181pt.
+File: embracetopimage.png Graphic file (type png)
+<use embracetopimage.png>
+Package pdftex.def Info: embracetopimage.png  used on input line 259.
+(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
+
+
+Package fancyhdr Warning: \headheight is too small (26.0pt): 
+(fancyhdr)                Make it at least 33.28958pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.28958pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
+
+[11 <./latexText//./figures//figureGeomag_6.png> <./latexText//./figures//figur
+eGeomag_7.png> <./latexText//./figures//figureGeomag_8.png>]
+<./figures//BoaVista.png, id=171, 847.165pt x 653.44125pt>
 File: ./figures//BoaVista.png Graphic file (type png)
 <use ./figures//BoaVista.png>
-Package pdftex.def Info: ./figures//BoaVista.png  used on input line 253.
-(pdftex.def)             Requested size: 398.33858pt x 283.73499pt.
-File: embracetopimage.png Graphic file (type png)
-<use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 255.
-(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
-
-
-Package fancyhdr Warning: \headheight is too small (26.0pt): 
-(fancyhdr)                Make it at least 33.28958pt, for example:
-(fancyhdr)                \setlength{\headheight}{33.28958pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
-
-[10 <./latexText//./figures//figureGeomag_6.png>]
-<./figures//CachoeiraPaulista.png, id=163, 846.16125pt x 631.35875pt>
+Package pdftex.def Info: ./figures//BoaVista.png  used on input line 276.
+(pdftex.def)             Requested size: 398.33858pt x 307.24704pt.
+<./figures//CachoeiraPaulista.png, id=172, 839.135pt x 614.295pt>
 File: ./figures//CachoeiraPaulista.png Graphic file (type png)
 <use ./figures//CachoeiraPaulista.png>
 Package pdftex.def Info: ./figures//CachoeiraPaulista.png  used on input line 2
-64.
-(pdftex.def)             Requested size: 398.33858pt x 297.21071pt.
+87.
+(pdftex.def)             Requested size: 398.33858pt x 291.60568pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 272.
+Package pdftex.def Info: embracetopimage.png  used on input line 289.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -643,22 +681,36 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
-[11 <./latexText//./figures//BoaVista.png (PNG copy)> <./latexText//./figures//
-CachoeiraPaulista.png (PNG copy)>]
-<./figures//SãoLuís.png, id=168, 852.18375pt x 623.32875pt>
+[12 <./latexText//./figures//BoaVista.png (PNG copy)>]
+<./figures//SãoLuís.png, id=177, 828.09375pt x 632.3625pt>
 File: ./figures//SãoLuís.png Graphic file (type png)
 <use ./figures//SãoLuís.png>
-Package pdftex.def Info: ./figures//SãoLuís.png  used on input line 275.
-(pdftex.def)             Requested size: 398.33858pt x 291.36667pt.
-<./figures/pt_outfileScint_0.jpg, id=169, 4150.50626pt x 5868.92625pt>
+Package pdftex.def Info: ./figures//SãoLuís.png  used on input line 299.
+(pdftex.def)             Requested size: 398.33858pt x 304.19633pt.
+File: embracetopimage.png Graphic file (type png)
+<use embracetopimage.png>
+Package pdftex.def Info: embracetopimage.png  used on input line 312.
+(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
+
+
+Package fancyhdr Warning: \headheight is too small (26.0pt): 
+(fancyhdr)                Make it at least 33.28958pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.28958pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
+
+[13 <./latexText//./figures//CachoeiraPaulista.png (PNG copy)> <./latexText//./
+figures//SãoLuís.png (PNG copy)>]
+<./figures/pt_outfileScint_0.jpg, id=184, 4150.50626pt x 5868.92625pt>
 File: ./figures/pt_outfileScint_0.jpg Graphic file (type jpg)
 <use ./figures/pt_outfileScint_0.jpg>
-Package pdftex.def Info: ./figures/pt_outfileScint_0.jpg  used on input line 29
-7.
+Package pdftex.def Info: ./figures/pt_outfileScint_0.jpg  used on input line 31
+5.
 (pdftex.def)             Requested size: 398.33858pt x 563.1956pt.
 File: embracetopimage.png Graphic file (type png)
 <use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 299.
+Package pdftex.def Info: embracetopimage.png  used on input line 321.
 (pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
 
 
@@ -669,21 +721,7 @@ Package fancyhdr Warning: \headheight is too small (26.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
 
-[12 <./latexText//./figures//SãoLuís.png (PNG copy)>]
-File: embracetopimage.png Graphic file (type png)
-<use embracetopimage.png>
-Package pdftex.def Info: embracetopimage.png  used on input line 308.
-(pdftex.def)             Requested size: 284.52756pt x 29.68954pt.
-
-
-Package fancyhdr Warning: \headheight is too small (26.0pt): 
-(fancyhdr)                Make it at least 33.28958pt, for example:
-(fancyhdr)                \setlength{\headheight}{33.28958pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-7.28958pt}.
-
-[13 <./latexText//./figures/pt_outfileScint_0.jpg>]
+[14 <./latexText//./figures/pt_outfileScint_0.jpg>]
 (./latexText//reportSpaceWeather_Pt.aux)
 
 Package rerunfilecheck Warning: File `reportSpaceWeather_Pt.out' has changed.
@@ -691,29 +729,37 @@ Package rerunfilecheck Warning: File `reportSpaceWeather_Pt.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `reportSpaceWeather_Pt.out':
-(rerunfilecheck)             Before: 1B04C4BBB999B96D9CE03FF332D91CE5;3228
-(rerunfilecheck)             After:  B293F91A481321C432B8A3C799529E25;2467.
+(rerunfilecheck)             Before: 1418F2C2ED1DC9DFA5589B4F58A20772;3128
+(rerunfilecheck)             After:  6CBBC382F9FC6E0D5C0755E25C1C76BF;2844.
  ) 
 Here is how much of TeX's memory you used:
- 10647 strings out of 478276
- 168852 string characters out of 5853014
- 476806 words of memory out of 5000000
- 28657 multiletter control sequences out of 15000+600000
+ 10691 strings out of 478238
+ 170235 string characters out of 5850456
+ 478754 words of memory out of 5000000
+ 28728 multiletter control sequences out of 15000+600000
  477810 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,16n,63p,918b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ./latexText//reportSpaceWeather_Pt.pdf (13 pages, 26247963 by
+ 60i,16n,63p,939b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+pdfTeX warning (dest): name{subsection.10.1} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on ./latexText//reportSpaceWeather_Pt.pdf (14 pages, 37212018 by
 tes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

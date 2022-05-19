@@ -6,6 +6,7 @@ Wand
 Pillow
 PyMuPDF
 polyglot
+langdetect
 pyicu
 pycld2
 morfessor
@@ -13,3 +14,4 @@ python-docx
 python-pptx
 openpyxl_image_loader
 openpyxl
+logger
