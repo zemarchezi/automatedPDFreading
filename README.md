@@ -3,8 +3,10 @@
 
 ## Requirements
 
-
 Python 3.8+
+
+1. Clone or download the automatePDFreading
+2. From the automatePDFreading directory: 
 
 ```python
    pip install -r requirements.txt
