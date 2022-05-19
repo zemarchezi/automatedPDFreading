@@ -582,7 +582,7 @@ def extractFiguresTextScint(docPath, filename, outputFigure, responsible):
             # pix.save(output)
 
     textpt = '\section{Cintilação} \n \subsection{Responsável: %s} \n \n'  %(responsible)  +ttextPt + '\n'
-    texten = '\section{SCintilation} \n \subsection{Responsible: %s} \n \n'  %(responsible)  +ttextEn +'\n'
+    texten = '\section{Scintilation} \n \subsection{Responsible: %s} \n \n'  %(responsible)  +ttextEn +'\n'
 
     print(pathEn)
     
