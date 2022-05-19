@@ -41,9 +41,11 @@ dictPaths = separatePathsAreas(files)
 dictPaths = dict(sorted(dictPaths.items()))
 
 latexFilesPath = configFile["latexPath"]
-Path(latexFilesPath).mkdir(parents=True, exist_ok=True)
+
 
 outputimage = configFile["outputimagePath"]
+
+Path(outputimage).mkdir(parents=True, exist_ok=True)
 
 dictResponsible = configFile["dictResponsible"]
 
