@@ -6,13 +6,14 @@ from pdf2image import convert_from_path
 from pptx import Presentation
 import zipfile
 from docx import Document
-from polyglot.detect import Detector
+# from polyglot.detect import Detector
+from langdetect import detect, DetectorFactory
 from pdf2image import convert_from_path
 from openpyxl import load_workbook
 from openpyxl_image_loader import SheetImageLoader
 import string
 #%%
-
+DetectorFactory.seed = 0
 ########################################################################################
 ##  SUN
 ########################################################################################
@@ -206,10 +207,15 @@ def extractFiguresTextRadBelts(docPath, filename):
 def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible):
     dictsposition, texst, zipf = extractFiguresTextRadBelts(docPath, filename)
     keys = list(dictsposition.keys())
-    detector = Detector(dictsposition[keys[0]]['leg'])
-    if detector.language.code == 'pt':
+    # detector = Detector(dictsposition[keys[0]]['leg'])
+    detector = detect(dictsposition[keys[0]]['leg'])
+    # if detector.language.code == 'pt':
+    #     text = '\section{Cinturões de Radiação} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+    # if detector.language.code == 'en':
+    #     text = '\section{Radiation Belts} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    if detector == 'pt':
         text = '\section{Cinturões de Radiação} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
-    if detector.language.code == 'en':
+    if detector == 'en':
         text = '\section{Radiation Belts} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
     keys = list(dictsposition.keys())
     
@@ -252,10 +258,14 @@ def extractFiguresTextULF(docPath, filename, outputFigure, responsible):
     with fitz.open(docPath + filename) as doc:
         for page in range(-2,0):
             text = doc[page].get_text()
-            detector = Detector(text)
-            if detector.language.code == 'pt':
+            detector = detect(text)
+            # if detector.language.code == 'pt':
+            #     ttextPt += text
+            # if detector.language.code == 'en':
+            #     ttextEn += text
+            if detector == 'pt':
                 ttextPt += text
-            if detector.language.code == 'en':
+            if detector == 'en':
                 ttextEn += text
 
     ttextEn += ' '.join(ttextEn.split('\n')[:-3])
@@ -481,10 +491,14 @@ def extractFiguresTextIonosphere(docPath, filename):
         dictsposition[bol]['img'] = images[nnb] 
         for nn, te in enumerate(texst):
             if te.startswith(bol):
-                detector = Detector(texst[nn+1])
-                if detector.language.code == 'pt':
+                detector = detect(texst[nn+1])
+                # if detector.language.code == 'pt':
+                #     dictsposition[bol]['pt'] = nn
+                # if detector.language.code == 'en':
+                #     dictsposition[bol]['en'] = nn
+                if detector == 'pt':
                     dictsposition[bol]['pt'] = nn
-                if detector.language.code == 'en':
+                if detector == 'en':
                     dictsposition[bol]['en'] = nn
 
     return dictsposition, texst, z
@@ -717,10 +731,14 @@ def constructLatexFileRoti(docPath, filename, outputFigure, responsible):
 
     for i in texst:
         if len(i)>1:
-            detector = Detector(i)
-            if detector.language.code == 'en':
+            detector = detect(i)
+            # if detector.language.code == 'en':
+            #     texten += i + '\n\n'
+            # if detector.language.code == 'pt':
+            #     textpt += i + '\n\n'
+            if detector == 'en':
                 texten += i + '\n\n'
-            if detector.language.code == 'pt':
+            if detector == 'pt':
                 textpt += i + '\n\n'
     
     # if detector.language.code == 'pt':
