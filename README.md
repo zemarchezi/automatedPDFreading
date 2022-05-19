@@ -25,38 +25,39 @@ The parameters in the file are:
 
 ```json
    {
-    "dataPath": "./data/", # 
-    "latexPath": "./latexText",
-    "outputimagePath": "./latexText/figures/",
-    "dictResponsible": {"01Sun": "José Cecatto",
-                        "02Sun": "Douglas Silva",
-                        "03MeioInterp": "Paulo Jauer",
-                        "04RadBelt": "Ligia Alves da Silva",
-                        "05ULF": "José Paulo Marchezi",
-                        "06EMIC": "Claudia Medeiros",
-                        "07Geomag": "Livia Riveiro Alves",
-                        "08Ionosfera": "Laysa Resende",
-                        "09Scintilation": "Siomel Savio Odriozola",
-                        "10Imager": "LUME",
+    "dataPath": "directory where the individual reports are stored (default: ./data/)"
+    "latexPath": "directory are the LaTex files (default: ./latexText)",
+    "outputimagePath": "directory are the LaTex figures (default: ./latexText/figures/)",
+    "dictResponsible": {"01Sun": "Name",
+                        "02Sun": "Name",
+                        "03MeioInterp": "Name",
+                        "04RadBelt": "Name",
+                        "05ULF": "Name",
+                        "06EMIC": "Name",
+                        "07Geomag": "Name",
+                        "08Ionosfera": "Name",
+                        "09Scintilation": "Name",
+                        "10Imager": "Name",
                         "11ROTI": "Name"},
-    "generateLatex": true,
-    "compileLatex": true,
-    "deleteTempFile": false
+    "generateLatex": true (Set false if you don't want the program generate the LaTex file),
+    "compileLatex": true (Set false if you don't want the program compile the LaTex),
+    "deleteTempFile": false (Set true if you don't want to delete the ./data/ and ./latexText/figures/ content)
 }
    
 ```
 
 ***
+# Usage
+
+1st Edit the "config.json" and set all folders and responsible names.
+2nd Run
 
 ```python
-import json
-from pysatdata.loaders.load import *
-
-trange=['2021-05-26', '2021-05-30']
-
-varss_rept = load_sat(trange=trange, satellite='rbsp',
-                     probe=['a'], level='2', rel='rel03',
-                     instrument='rept',datatype='sectors',
-                     config_file='./pysatdata/resources/config_file.json', downloadonly=False,
-                     usePandas=False, usePyTplot=True)
+   python main.py --dirConfig "config.json" --year "YYYY" --month "MM" --day "DD"
+```
+```bash
+   --dirConfig DIRCONFIG O diretório do arquivo .json de configuração.
+  --year YEAR           Ano no qual o Briefing ocorreu.
+  --month MONTH         Mes no qual o Briefing ocorreu.
+  --day DAY             Dia no qual o Briefing ocorreu.
 ```
