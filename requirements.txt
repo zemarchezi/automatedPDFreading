@@ -14,3 +14,5 @@ python-pptx
 openpyxl_image_loader
 openpyxl
 logger
+pdfkit
+markdown

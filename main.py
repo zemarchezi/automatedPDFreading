@@ -31,6 +31,8 @@ arguments = parser.parse_args()
 with open(f'{arguments.dirConfig}', 'r') as f:
     configFile = json.load(f)
 
+#%%
+
 PATH = configFile['dataPath']
 
 files = glob.glob(f"{PATH}*")
@@ -51,12 +53,13 @@ dictResponsible = configFile["dictResponsible"]
 
 #%%
 eF = extractFiles(dictPaths=dictPaths, dictResponsible=dictResponsible, 
-                  outputimage=outputimage)
+                  outputimage=outputimage, latex=True)
 #%%
 
 eF.extractData()
 
 
+#%%
 if configFile['generateLatex']:
     eF.constructLatex(outputPath=latexFilesPath, 
                       year=f"{arguments.year}", 
@@ -67,6 +70,4 @@ if configFile['compileLatex']:
     eF.compileLatexFile()
 if configFile['deleteTempFile']:
     eF.deleteTempFiles(filesReports=files)
-
-
 

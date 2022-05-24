@@ -18,7 +18,7 @@ DetectorFactory.seed = 0
 ##  SUN
 ########################################################################################
 
-def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
+def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible, latex):
 
     
     with fitz.open(docPath + filename) as doc:
@@ -41,18 +41,25 @@ def extractFiguresTextSun_0(docPath, filename, outputFigure, responsible):
     else:
         ttextEn = ''
 
-    ttextEn = ttextEn.strip().replace('%', '\%').replace('\n', "\\\ ")
-    ttextEn = ttextEn.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
-    ttextPt = ttextPt.strip().replace('%', '\%').replace('\n', "\\\ ")
-    ttextPt = ttextPt.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
-    textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n' %(responsible) +ttextEn
-    texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n' %(responsible) +ttextPt
+    
+    if latex:
+        ttextEn = ttextEn.strip().replace('%', '\%').replace('\n', "\\\ ")
+        ttextEn = ttextEn.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
+        ttextPt = ttextPt.strip().replace('%', '\%').replace('\n', "\\\ ")
+        ttextPt = ttextPt.replace('<', '$<$').replace('>', '$>$').replace('~', '$\sim$')
+        textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n' %(responsible) +ttextEn
+        texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n' %(responsible) +ttextPt
+    else:
+        ttextEn = ttextEn.strip()
+        ttextPt = ttextPt.strip()
+        textpt = '# Sol \n ## Responsável: %s \n\n' %(responsible) +ttextEn
+        texten = '# Sun \n ## Responsible: %s \n\n' %(responsible) +ttextPt
 
 
     return texten, textpt
 
 #%%
-def extractFiguresTextSun_1(docPath, filename, outputFigure, responsible):
+def extractFiguresTextSun_1(docPath, filename, outputFigure, responsible, latex):
     regexPt = r"(?i)resumo"
     regexEn = r"(?i)summary"
     
@@ -89,16 +96,23 @@ def extractFiguresTextSun_1(docPath, filename, outputFigure, responsible):
             # output = f"{im}_outfile_{p}.png"
             # pix.save(output)
 
-    textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n'  %(responsible)  +extractItemize(ttextPt) + '\n'
-    texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n'  %(responsible) +extractItemize(ttextEn) +'\n'
-
-    
-    figures = """
-    \\begin{figure}[H]
-        \\centering
-        \\includegraphics[width=14cm]{./%s}
-    \\end{figure} \n \n
-    """
+    if latex:
+        textpt = '\section{Sol} \n \subsection{Responsável: %s}\n\n'  %(responsible)  +extractItemize(ttextPt, latex) + '\n'
+        texten = '\section{Sun} \n \subsection{Responsible: %s}\n\n'  %(responsible) +extractItemize(ttextEn, latex) +'\n'
+    else:
+        textpt = '# Sol \n ## Responsável: %s \n\n'  %(responsible)  +extractItemize(ttextPt, latex) + '\n'
+        texten = '# Sun \n ## Responsible: %s \n\n'  %(responsible) +extractItemize(ttextEn, latex) +'\n'
+    if latex:
+        figures = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        figures = insertFigures(latexOrMarkdown='markdown', caption=False)
+    print(figures)
+    # figures = """
+    # \\begin{figure}[H]
+    #     \\centering
+    #     \\includegraphics[width=14cm]{./%s}
+    # \\end{figure} \n \n
+    # """
     for s in range(len(pathEn)):
         ouIm = '/'.join(pathEn[s].split('/')[2:])
         texten += figures % (ouIm)
@@ -142,22 +156,33 @@ def extractFiguresTextInterplMedium(docPath, filename):
     if len(splitEn) < 2:
         splitEn = texten.split('\x0b', 1)
         if len(splitEn) < 2:
-            splitEn = re.split(patternEn, aas[1])
+            splitEn = re.split(patternEn, 1)
     textpt = splitPt[1]
     texten = splitEn[1]
 
     return texten.split('\n'), textpt.split('\n'), images, z
 
 
-def constructLatexFileInterpMedium(docPath, filename, outputFigure, responsible):
+def constructLatexFileInterpMedium(docPath, filename, outputFigure, responsible, latex):
     texsten, texstpt, images, zipf = extractFiguresTextInterplMedium(docPath, filename)
 
-    textpt = '\section{Meio Interplanetário} \n \subsection{Responsável: %s} \n \n ' %(responsible) 
-    texten = '\section{Interplanetary Medium} \n \subsection{Responsible: %s} \n \n ' %(responsible) 
+
+    
     
     outfigpath = saveFigs(zipf, images[0], f"{outputFigure}", 'figureMIIndex', crop=False)
 
-    includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n \\begin{itemize}\n " % '/'.join(outfigpath.split('/')[2:]) 
+    # includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n \\begin{itemize}\n " % '/'.join(outfigpath.split('/')[2:]) 
+
+    if latex:
+        textpt = '\section{Meio Interplanetário} \n \subsection{Responsável: %s} \n \n ' %(responsible) 
+        texten = '\section{Interplanetary Medium} \n \subsection{Responsible: %s} \n \n ' %(responsible) 
+        includeFiguretemp = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        textpt = '# Meio Interplanetário \n ## Responsável: %s \n \n ' %(responsible) 
+        texten = '# Interplanetary Medium \n ## Responsible: %s \n \n ' %(responsible) 
+        includeFiguretemp = insertFigures(latexOrMarkdown='markdown', caption=False)
+
+    includeFigure = includeFiguretemp % ('/'.join(outfigpath.split('/')[2:]) )
 
     texten += includeFigure
     textpt += includeFigure
@@ -204,7 +229,7 @@ def extractFiguresTextRadBelts(docPath, filename):
     return dictsposition, texs, z
 
 
-def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible):
+def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible, latex):
     dictsposition, texst, zipf = extractFiguresTextRadBelts(docPath, filename)
     keys = list(dictsposition.keys())
     # detector = Detector(dictsposition[keys[0]]['leg'])
@@ -214,17 +239,21 @@ def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible):
     # if detector.language.code == 'en':
     #     text = '\section{Radiation Belts} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
     if detector == 'pt':
-        text = '\section{Cinturões de Radiação} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        if latex:
+            text = '\section{Cinturões de Radiação} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        else:
+            text = '# Cinturões de Radiação \n ## Responsável: %s \n \n'  %(responsible) 
     if detector == 'en':
-        text = '\section{Radiation Belts} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+        if latex:
+            text = '\section{Radiation Belts} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+        else:
+            text = '# Radiation Belts \n ## Responsible: %s \n \n'  %(responsible) 
     keys = list(dictsposition.keys())
     
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                             \\caption{%s}
-                        \\end{figure}\n
-                     """
+    if latex:
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=True)
+    else:
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=True)
 
     
     for i in range(len(keys)):
@@ -252,7 +281,7 @@ def constructLatexFileRadBelts(docPath, filename, outputFigure, responsible):
 ########################################################################################
 
 
-def extractFiguresTextULF(docPath, filename, outputFigure, responsible):
+def extractFiguresTextULF(docPath, filename, outputFigure, responsible, latex):
     ttextEn = ''
     ttextPt = ''
     with fitz.open(docPath + filename) as doc:
@@ -317,15 +346,27 @@ def extractFiguresTextULF(docPath, filename, outputFigure, responsible):
                               (ULF waves).""", 
                               'crop': [260,1650,200,2900]},
                   }
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                             \\caption{%s}
-                        \\end{figure}\n
-                     """
+    
+    if latex:
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=True)
+    else:
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=True)
+
+    # includeFigure = includeFiguretemp % ('/'.join(outfigpath.split('/')[2:]) )
+
+    # includeFigure = """\\begin{figure}[H]\n    
+    #                     \\centering\n   
+    #                          \\includegraphics[width=14cm]{./%s}\n
+    #                          \\caption{%s}
+    #                     \\end{figure}\n
+    #                  """
     keys = list(imagesDict.keys())
-    textpt = '\section{Ondas ULF} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
-    texten = '\section{ULF Waves} \n \subsection{Responsible: %s} \n \n'  %(responsible)  
+    if latex:
+        textpt = '\section{Ondas ULF} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        texten = '\section{ULF Waves} \n \subsection{Responsible: %s} \n \n'  %(responsible)  
+    else:
+        textpt = '# Ondas ULF \n ## Responsável: %s \n \n'  %(responsible) 
+        texten = '# ULF Waves \n ## Responsible: %s \n \n'  %(responsible)  
 
     for i in range(len(keys)):
         crops = imagesDict[keys[i]]['crop']
@@ -347,20 +388,29 @@ def extractFiguresTextULF(docPath, filename, outputFigure, responsible):
 ########################################################################################
 
 
-def extractFiguresTextEMIC(docPath, filename, outputFigure, responsible):
+def extractFiguresTextEMIC(docPath, filename, outputFigure, responsible, latex):
     textPt = ''
     textEn = ''
     
 
     pages = convert_from_path(docPath + filename, 500)
 
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                        \\end{figure}\n
-                     """
-    textpt = '\section{Ondas EMIC} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
-    texten = '\section{EMIC Waves} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    if latex:
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=False)
+
+    # includeFigure = """\\begin{figure}[H]\n    
+    #                     \\centering\n   
+    #                          \\includegraphics[width=14cm]{./%s}\n
+    #                     \\end{figure}\n
+    #                  """
+    if latex:
+        textpt = '\section{Ondas EMIC} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        texten = '\section{EMIC Waves} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    else:
+        textpt = '# Ondas EMIC \n ## Responsável: %s \n \n'  %(responsible) 
+        texten = '# EMIC Waves \n ## Responsible: %s \n \n'  %(responsible) 
     for i in range(1,len(pages)):
         outfigpath = saveFigsPdf(pages, i, 
                              f"{outputFigure}", f'figureEMIC_{i}', crop=False)
@@ -392,11 +442,13 @@ def extractFiguresTextGeomag(docPath, filename):
     sheetpt = wb['Plan4pt']
     for r in range(sheeten.max_row):
         cell_obj = sheeten.cell(row = r+1, column = 1)
-        texten.append(cell_obj.value)
+        if cell_obj.value:
+            texten.append(cell_obj.value)
 
     for r in range(sheetpt.max_row):
         cell_obj = sheetpt.cell(row = r+1, column = 1)
-        textpt.append(cell_obj.value)
+        if cell_obj.value:
+            textpt.append(cell_obj.value)
     # Put your sheet in the loader
     sheet = wb['Plan1']
     image_loader = SheetImageLoader(sheet)
@@ -412,19 +464,26 @@ def extractFiguresTextGeomag(docPath, filename):
     return cellFigure, textpt, texten
 
 
-def constructLatexFileGeomag(docPath, filename, outputFigure, responsible):
+def constructLatexFileGeomag(docPath, filename, outputFigure, responsible, latex):
     cellFigure, tpt, ten = extractFiguresTextGeomag(docPath, filename)
 
-    textpt = '\section{Geomagnetismo} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
-    texten = '\section{Geomagnetism} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    if latex:
+        textpt = '\section{Geomagnetismo} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        texten = '\section{Geomagnetism} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    else:
+        textpt = '# Geomagnetismo \n ## Responsável: %s \n \n'  %(responsible) 
+        texten = '# Geomagnetism \n ## Responsible: %s \n \n'  %(responsible) 
 
-
+    if latex:
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=False)
     
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                        \\end{figure}\n
-                     """
+    # includeFigure = """\\begin{figure}[H]\n    
+    #                     \\centering\n   
+    #                          \\includegraphics[width=14cm]{./%s}\n
+    #                     \\end{figure}\n
+    #                  """
     wb = load_workbook(docPath+filename)
     sheet = wb['Plan1']
     image_loader = SheetImageLoader(sheet)
@@ -434,25 +493,36 @@ def constructLatexFileGeomag(docPath, filename, outputFigure, responsible):
         texten += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
         textpt += includeFigure % ('/'.join(outfigpath.split('/')[2:]))
     
-    textpt += "\\begin{itemize} \n" 
-    texten += "\\begin{itemize} \n" 
-    for i in tpt:
-        if not i.startswith('-'):
-            textpt += "\\item " + i + "\n"
-        else:
-            textpt += "\\begin{itemize} \n \\item " + i + "\n \\end{itemize} \n"
+    if latex:
+        textpt += "\\begin{itemize} \n" 
+        texten += "\\begin{itemize} \n" 
+        for i in tpt:
+            if not i.startswith('-'):
+                textpt += "\\item " + i + "\n"
+            else:
+                textpt += "\\begin{itemize} \n \\item " + i + "\n \\end{itemize} \n"
 
-    for i in ten:
-        if not i.startswith('-'):
-            texten += "\\item " + i + "\n"
-        else:
-            texten += "\\begin{itemize} \n \\item " + i + "\n \\end{itemize} \n"
+        for i in ten:
+            if not i.startswith('-'):
+                texten += "\\item " + i + "\n"
+            else:
+                texten += "\\begin{itemize} \n \\item " + i + "\n \\end{itemize} \n"
 
+        textpt += "\\end{itemize} \n"
+        texten += "\\end{itemize} \n"
+    else:
+        for i in tpt:
+            if not i.startswith('-'):
+                textpt += "* " + i + "\n"
+            else:
+                textpt += "\t * " + i + "\n"
 
+        for i in ten:
+            if not i.startswith('-'):
+                texten += "* " + i + "\n"
+            else:
+                texten += "\t * " + i + "\n"
 
-    textpt += "\\end{itemize} \n"
-    texten += "\\end{itemize} \n"
-    # text += textSum
 
 
     return texten, textpt
@@ -504,37 +574,72 @@ def extractFiguresTextIonosphere(docPath, filename):
     return dictsposition, texst, z
 
 
-def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible):
+def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible, latex):
     dictsposition, texst, zipf = extractFiguresTextIonosphere(docPath, filename)
     keys = list(dictsposition.keys())
-    textpt = '\section{Ionosfera} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
-    texten = '\section{Ionosphere} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+
+    if latex:
+        textpt = '\section{Ionosfera} \n \subsection{Responsável: %s} \n \n'  %(responsible) 
+        texten = '\section{Ionosphere} \n \subsection{Responsible: %s} \n \n'  %(responsible) 
+    else:
+        textpt = '# Ionosfera \n ## Responsável: %s \n \n'  %(responsible) 
+        texten = '# Ionosphere \n ## Responsible: %s \n \n'  %(responsible) 
+
     for i in range(len(keys)):
         figname = keys[i].replace(' ', '').replace(':','')
         outfigpath = saveFigs(zipf, dictsposition[keys[i]]['img'], f"{outputFigure}", figname, crop=False)
-        textpt += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
-        texten += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
-        if i+1 < len(keys):
-            textitempt = ''
-            for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[i+1]]['pt']]:
-                textitempt += '\\item ' + ti + '\n'
-            textitemen = ''
-            for ti in texst[dictsposition[keys[i]]['en']+1:dictsposition[keys[i+1]]['en']]:
-                textitemen += '\\item ' + ti + '\n'
+        
+        if latex:
+            textpt += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
+            texten += '\\textbf{%s}\n\n \\begin{itemize}\n' % (keys[i])
+            if i+1 < len(keys):
+                textitempt = ''
+                for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[i+1]]['pt']]:
+                    textitempt += '\\item ' + ti + '\n'
+                textitemen = ''
+                for ti in texst[dictsposition[keys[i]]['en']+1:dictsposition[keys[i+1]]['en']]:
+                    textitemen += '\\item ' + ti + '\n'
+            else:
+                textitempt = ''
+                for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[0]]['en']]:
+                    textitempt += '\\item ' + ti + '\n'
+                textitemen = ''
+                for ti in texst[dictsposition[keys[i]]['en']+1:]:
+                    textitemen += '\\item ' + ti + '\n'
+
+            includeFiguretemp = insertFigures(latexOrMarkdown='latex', caption=False)
+            includeFigure = includeFiguretemp % ('/'.join(outfigpath.split('/')[2:]) )
+
+            textpt += f'{textitempt}'+ '\\end{itemize}\n'
+            textpt += f"{includeFigure}\n"
+            texten += f'{textitemen}' + '\\end{itemize}\n'
+            texten += f"{includeFigure}\n"
         else:
-            textitempt = ''
-            for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[0]]['en']]:
-                textitempt += '\\item ' + ti + '\n'
-            textitemen = ''
-            for ti in texst[dictsposition[keys[i]]['en']+1:]:
-                textitemen += '\\item ' + ti + '\n'
+            textpt += '**%s**\n\n' % (keys[i])
+            texten += '**%s**\n\n' % (keys[i])
+            if i+1 < len(keys):
+                textitempt = ''
+                for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[i+1]]['pt']]:
+                    textitempt += '* ' + ti + '\n'
+                textitemen = ''
+                for ti in texst[dictsposition[keys[i]]['en']+1:dictsposition[keys[i+1]]['en']]:
+                    textitemen += '* ' + ti + '\n'
+            else:
+                textitempt = ''
+                for ti in texst[dictsposition[keys[i]]['pt']+1:dictsposition[keys[0]]['en']]:
+                    textitempt += '* ' + ti + '\n'
+                textitemen = ''
+                for ti in texst[dictsposition[keys[i]]['en']+1:]:
+                    textitemen += '* ' + ti + '\n'
 
-        includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n" % '/'.join(outfigpath.split('/')[2:]) 
+            includeFiguretemp = insertFigures(latexOrMarkdown='markdown', caption=False)
+            includeFigure = includeFiguretemp % ('/'.join(outfigpath.split('/')[2:]) )
+            # includeFigure = "\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=14cm]{./%s}\n\\end{figure}\n" % '/'.join(outfigpath.split('/')[2:]) 
 
-        textpt += f'{textitempt}'+ '\\end{itemize}\n'
-        textpt += f"{includeFigure}\n"
-        texten += f'{textitemen}' + '\\end{itemize}\n'
-        texten += f"{includeFigure}\n"
+            textpt += f'{textitempt}'+ '\n'
+            textpt += f"{includeFigure}\n"
+            texten += f'{textitemen}' + '\n'
+            texten += f"{includeFigure}\n"
 
     return texten, textpt
 
@@ -544,7 +649,7 @@ def constructLatexFileIonosphere(docPath, filename, outputFigure, responsible):
 ########################################################################################
 
 
-def extractFiguresTextScint(docPath, filename, outputFigure, responsible):
+def extractFiguresTextScint(docPath, filename, outputFigure, responsible, latex):
     regexPt = r"(?i)resumo"
     regexEn = r"(?i)summary"
     
@@ -581,17 +686,26 @@ def extractFiguresTextScint(docPath, filename, outputFigure, responsible):
             # output = f"{im}_outfile_{p}.png"
             # pix.save(output)
 
-    textpt = '\section{Cintilação} \n \subsection{Responsável: %s} \n \n'  %(responsible)  +ttextPt + '\n'
-    texten = '\section{Scintilation} \n \subsection{Responsible: %s} \n \n'  %(responsible)  +ttextEn +'\n'
-
+    if latex:
+        textpt = '\section{Cintilação} \n \subsection{Responsável: %s} \n \n'  %(responsible)  +ttextPt + '\n'
+        texten = '\section{Scintilation} \n \subsection{Responsible: %s} \n \n'  %(responsible)  +ttextEn +'\n'
+    else:
+        textpt = '# Cintilação \n ## Responsável: %s \n \n'  %(responsible)  +ttextPt + '\n'
+        texten = '# Scintilation \n ## Responsible: %s \n \n'  %(responsible)  +ttextEn +'\n'
     print(pathEn)
     
-    figures = """
-    \\begin{figure}[H]
-        \\centering
-        \\includegraphics[width=14cm]{./%s}
-    \\end{figure} \n \n
-    """
+    if latex:
+        figures = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        figures = insertFigures(latexOrMarkdown='markdown', caption=False)
+
+
+    # figures = """
+    # \\begin{figure}[H]
+    #     \\centering
+    #     \\includegraphics[width=14cm]{./%s}
+    # \\end{figure} \n \n
+    # """
     for s in range(len(pathEn)):
         ouIm = '/'.join(pathEn[s].split('/')[2:])
         texten += figures % (ouIm)
@@ -610,7 +724,7 @@ def extractFiguresTextScint(docPath, filename, outputFigure, responsible):
 
 
 
-def extractFiguresTextImager(docPath, filename, outputFigure, responsible):
+def extractFiguresTextImager(docPath, filename, outputFigure, responsible, latex):
 
     pages = convert_from_path(docPath + filename, 500)
 
@@ -624,16 +738,24 @@ def extractFiguresTextImager(docPath, filename, outputFigure, responsible):
                               'regex_en': r"(?<=Remarks.)(.|\n)*",
                               'regex_pt': r"(?<=Observacoes.)(.|\n)*(?=Remarks)"}
                   }
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                        \\end{figure}\n
-                     """
+    if latex:
+        ttextPt = '\section{Imageador All-Sky} \n \subsection{Responsável: %s} \n \n'  %(responsible)
+        ttextEn = '\section{All-Sky Imager} \n \subsection{Responsible: %s} \n \n'  %(responsible)
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=False)
+    else:
+        ttextPt = '# Imageador All-Sky \n ## Responsável: %s \n \n'  %(responsible)
+        ttextEn = '# All-Sky Imager \n ## Responsible: %s \n \n'  %(responsible)
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=False)
+    
+    # includeFigure = """\\begin{figure}[H]\n    
+    #                     \\centering\n   
+    #                          \\includegraphics[width=14cm]{./%s}\n
+    #                     \\end{figure}\n
+    #                  """
     keys = list(textDict.keys())
     # ttextEn = ''
     # ttextPt = ''
-    ttextPt = '\section{Imageador All-Sky} \n \subsection{Responsável: %s} \n \n'  %(responsible)
-    ttextEn = '\section{All-Sky Imager} \n \subsection{Responsible: %s} \n \n'  %(responsible)
+    
 
     
     for i in range(len(keys)):
@@ -655,10 +777,10 @@ def extractFiguresTextImager(docPath, filename, outputFigure, responsible):
             matches = re.search(textDict[keys[i]]['regex_en'], text, re.MULTILINE)
             
             if matches:
-                ttextEn += extractItemize_Imager(matches.group())
+                ttextEn += extractItemize_Imager(matches.group(), latex)
             matches = re.search(textDict[keys[i]]['regex_pt'], text, re.MULTILINE)
             if matches:
-                ttextPt += extractItemize_Imager(matches.group())
+                ttextPt += extractItemize_Imager(matches.group(), latex)
 
     return ttextEn, ttextPt
 
@@ -723,11 +845,15 @@ def extractFiguresTextRoti(docPath, filename):
     return dictsposition, texs, z
 
 
-def constructLatexFileRoti(docPath, filename, outputFigure, responsible):
+def constructLatexFileRoti(docPath, filename, outputFigure, responsible, latex):
     dictsposition, texst, zipf = extractFiguresTextRoti(docPath, filename)
 
-    textpt = '\section{ROTI} \n \subsection{Responsável: %s} \n \n'  %(responsible)
-    texten = '\section{ROTI} \n \subsection{Responsible: %s} \n \n'  %(responsible)
+    if latex:
+        textpt = '\section{ROTI} \n \subsection{Responsável: %s} \n \n'  %(responsible)
+        texten = '\section{ROTI} \n \subsection{Responsible: %s} \n \n'  %(responsible)
+    else:
+        textpt = '# ROTI \n ## Responsável: %s \n \n'  %(responsible)
+        texten = '# ROTI \n ## Responsible: %s \n \n'  %(responsible)
 
     for i in texst:
         if len(i)>1:
@@ -747,12 +873,18 @@ def constructLatexFileRoti(docPath, filename, outputFigure, responsible):
     #     text = '\section{ROTI} \n \subsection{Responsible: Carolina de Sousa do Carmo} \n \n'
     keys = list(dictsposition.keys())
     
-    includeFigure = """\\begin{figure}[H]\n    
-                        \\centering\n   
-                             \\includegraphics[width=14cm]{./%s}\n
-                             \\caption{%s}
-                        \\end{figure}\n
-                     """
+    if latex:
+        includeFigure = insertFigures(latexOrMarkdown='latex', caption=True)
+    else:
+        includeFigure = insertFigures(latexOrMarkdown='markdown', caption=True)
+    
+
+    # includeFigure = """\\begin{figure}[H]\n    
+    #                     \\centering\n   
+    #                          \\includegraphics[width=14cm]{./%s}\n
+    #                          \\caption{%s}
+    #                     \\end{figure}\n
+    #                  """
 
     for i in range(len(keys)):
             

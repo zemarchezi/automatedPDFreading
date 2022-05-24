@@ -2,16 +2,18 @@
 from automatedBriefingReport.functions import *
 from automatedBriefingReport.readFiles import *
 from automatedBriefingReport.generateLatexFile import *
+from automatedBriefingReport.generateMarkdownFile import *
 from latexText.compileDocument import *
 from logger import *
 
 #%%
 
 class extractFiles():
-    def __init__(self, dictPaths, dictResponsible, outputimage):
+    def __init__(self, dictPaths, dictResponsible, outputimage, latex):
         self.dictPaths = dictPaths
         self.dictResponsible = dictResponsible
         self.outputimage = outputimage
+        self.latexFile = latex
 
     def extractData(self):
         logger.warning("Extracting Data...")
@@ -34,7 +36,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextSun_0(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -46,7 +49,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextSun_1(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -58,7 +62,8 @@ class extractFiles():
                     texten, textpt = constructLatexFileInterpMedium(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -78,7 +83,8 @@ class extractFiles():
                     texten = constructLatexFileRadBelts(docPath=dirpathen, 
                                                             filename=filenameen, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -90,7 +96,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextULF(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -102,7 +109,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextEMIC(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -114,7 +122,8 @@ class extractFiles():
                     texten, textpt = constructLatexFileGeomag(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -126,7 +135,8 @@ class extractFiles():
                     texten, textpt = constructLatexFileIonosphere(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -138,7 +148,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextScint(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -150,7 +161,8 @@ class extractFiles():
                     texten, textpt = extractFiguresTextImager(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -162,7 +174,8 @@ class extractFiles():
                     texten, textpt = constructLatexFileRoti(docPath=dirpath, 
                                                             filename=filename, 
                                                             outputFigure=self.outputimage, 
-                                                            responsible=self.dictResponsible[area])
+                                                            responsible=self.dictResponsible[area],
+                                                            latex=self.latexFile)
                 except (Exception) as e:
                     logger.error(e)
                     textpt = ''
@@ -183,6 +196,25 @@ class extractFiles():
                                                   outputPath=outputPath, 
                                                   date=f"{day}/{month}/{year}")
         logger.warning("Done Latex!")
+
+    def constructMarkdown(self, outputPath, year, month, day):
+        logger.warning("Constructing LaTex File")
+        self.outhpathlatex_En = generateMarkdownFile(self.latexTextEn, 
+                                                  EnPt=True, 
+                                                  outputPath=outputPath, 
+                                                  date=f"{year}/{month}/{day}")
+        self.outhpathlatex_Pt = generateMarkdownFile(self.latexTextPt, 
+                                                  EnPt=False, 
+                                                  outputPath=outputPath, 
+                                                  date=f"{day}/{month}/{year}")
+        logger.warning("Done Latex!")
+
+
+    def compileMarkdownFile(self):
+        logger.warning('Compiling markdown')
+        compileMarkdown(self.outhpathlatex_Pt, openFile=False)
+        compileMarkdown(self.outhpathlatex_En, openFile=False)
+        logger.warning("Pdf File is ready!")
 
     def compileLatexFile(self):
         logger.warning('Compiling Latex')

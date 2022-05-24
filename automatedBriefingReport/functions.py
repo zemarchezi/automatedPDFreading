@@ -11,7 +11,7 @@ import fitz
 from docx import Document
 from openpyxl import load_workbook
 
-def extractItemize(text):
+def extractItemize(text, latex):
     dictTex = {}
     for nn, i in enumerate(text.split('\n')[1:]):
         i = re.sub('[\¸\˜\´]+', '', i)
@@ -28,17 +28,27 @@ def extractItemize(text):
         tts = [i for i in tts if len(i)>0]
         dics[kk] = tts
 
-    texs = """\\begin{itemize} \n """
+    if latex:
+        texs = """\\begin{itemize} \n """
 
-    for i in dics.keys():
-        texs += '\\item ' + i +'\n'
-        if len(dics[i]) > 0:
-            for j in dics[i]:
-                texs += """\\begin{itemize} \n """ + '\\item' + j + '\n'
+        for i in dics.keys():
+            texs += '\\item ' + i +'\n'
+            if len(dics[i]) > 0:
+                for j in dics[i]:
+                    texs += """\\begin{itemize} \n """ + '\\item' + j + '\n'
+            
+                texs += """\\end{itemize} \n """
         
-            texs += """\\end{itemize} \n """
-    
-    texs += """\\end{itemize} \n """
+        texs += """\\end{itemize} \n """
+    else:
+        texs = """"""
+
+        for i in dics.keys():
+            texs += '* ' + i +'\n'
+            if len(dics[i]) > 0:
+                for j in dics[i]:
+                    texs += '\t *' + j + '\n'
+
 
     return texs
 
@@ -82,16 +92,24 @@ def get_bold_list(para):
     return bold_list
 
 
-def extractItemize_Imager(text):
-    texs = """\\begin{itemize} \n """
-    for i in text.split('•'):
-        if len(i) > 1:
-            texs += '\\item ' + ' '.join(i.split('\n')) +'\n'
-            if i.startswith('TEC'):
-                texs += '\\subsectoin{%s}' %(i) +'\n'
+def extractItemize_Imager(text, latex):
+    if latex:
+        texs = """\\begin{itemize} \n """
+        for i in text.split('•'):
+            if len(i) > 1:
+                texs += '\\item ' + ' '.join(i.split('\n')) +'\n'
+                if i.startswith('TEC'):
+                    texs += '\\subsectoin{%s}' %(i) +'\n'
+        
+        texs += """\\end{itemize} \n """
+    else:
+        texs = """"""
+        for i in text.split('•'):
+            if len(i) > 1:
+                texs += '* ' + ' '.join(i.split('\n')) +'\n'
+                if i.startswith('TEC'):
+                    texs += '## %s' %(i) +'\n'
     
-    texs += """\\end{itemize} \n """
-
     return texs
 
 
@@ -185,8 +203,43 @@ def separatePathsAreas(files):
             text = ''
             for r in range(sheetpt.max_row):
                 cell_obj = sheetpt.cell(row = r+1, column = 1)
-                text += cell_obj.value
+                if cell_obj.value:
+                    text += cell_obj.value
             if re.search(regexGeomag, text, re.MULTILINE):
                 dictPaths['07Geomag'] = {'path':ff}
     
     return dictPaths
+
+
+#%%
+
+def insertFigures(latexOrMarkdown, caption):
+    if latexOrMarkdown == 'latex':
+        if caption:
+            text = """\\begin{figure}[H]\n    
+                            \\centering\n   
+                                \\includegraphics[width=14cm]{./%s}\n
+                                \\caption{%s}
+                            \\end{figure}\n
+                        """
+        else:
+            text = """\\begin{figure}[H]\n    
+                        \\centering\n   
+                             \\includegraphics[width=14cm]{./%s}\n
+                        \\end{figure}\n
+                     """
+        
+        return text
+    elif latexOrMarkdown == 'markdown':
+        if caption:
+            text = """![Figure](./%s)*%s*
+                        """
+        else:
+            text = """![Figure](./%s)
+                        """
+        return text
+    else:
+        print("Choose between latex or markdown")
+        return """![Figure](./%s)
+                        """
+        
